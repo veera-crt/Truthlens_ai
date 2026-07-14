@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Purnima Murli states that a minister asked a student a question in English during an inspection.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Tamil Nadu minister faces flak over school inspection, questions students, teachers on speaking English. \u25b6\ufe0fUdhayanidhi calls Keerthana's ... A political controversy has erupted in Tamil Nadu after Industries Minister S. Keerthana publicly tested a student's English proficiency\u00a0... Submit a question of your choice related to life skills, exam preparation & stress, career guidance and more that you'll like to ask the Prime Minister.",
+      "url": "https://www.facebook.com/IndiaToday/posts/tamil-nadu-minister-faces-flak-over-school-inspection-questions-students-teacher/1636331935197015/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/IndiaToday/posts/tamil-nadu-minister-faces-flak-over-school-inspection-questions-students-teacher/1636331935197015/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.46817076206207275,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6890853810310364,
+  "claim": "Purnima Murli states that a minister asked a student a question in English during an inspection."
+}

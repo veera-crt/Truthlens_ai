@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The opposition party raised concerns regarding teachers and students.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "... video of her interacting with students during a school inspection went viral. The opposition accused her of using classrooms for political ... A classroom inspection by TVK IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video ... Teachers in India face pressure for expressing political opinions. Karan Sangwan was fired for asking students to vote for educated leaders.",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.41860508918762207,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6643025445938111,
+  "claim": "The opposition party raised concerns regarding teachers and students."
+}

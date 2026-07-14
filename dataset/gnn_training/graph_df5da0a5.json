@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Aamir Khan had his third marriage, marrying his girlfriend at the age of 61.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Aamir Khan marked his 60th birthday on Friday, and during a press conference held the day prior, he introduced his girlfriend, Gauri Spratt. He ... As Aamir Khan marries Gauri Spratt at 61, social media cheers. But would a 61-year-old actress with three marriages face kindness or moral ... Aamir Khan will marry for the third time, to girlfriend Gauri Spratt on 5 July 2026. The couple will register their marriage at Aamir's ...",
+      "url": "https://www.facebook.com/officialloveindianpageteam/posts/amir-khan-just-got-married-again-at-the-age-of-61-years-its-his-third-marriage-b/1335111585476812/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/officialloveindianpageteam/posts/amir-khan-just-got-married-again-at-the-age-of-61-years-its-his-third-marriage-b/1335111585476812/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7733656764030457,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8416828382015229,
+  "claim": "Aamir Khan had his third marriage, marrying his girlfriend at the age of 61."
+}

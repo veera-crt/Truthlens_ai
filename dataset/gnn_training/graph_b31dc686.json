@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Witnesses' evidence has already been recorded.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Generally speaking the evidence as recorded in vernacular in which the witnesses deposed is entitled to a great weight and is more reliable than the record ... The evidence recording of a witness is done as follows: Oath Before giving evidence the witness has to take the oath and solemnly affirms that he will tell the ... Video Conferencing for Trials and Witness Testimonies \u2022 Courts can now record witness statements and conduct hearings via video conferencing. \u2022 ...",
+      "url": "https://pg.punjab.gov.pk/recording_of_evidence",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://pg.punjab.gov.pk/recording_of_evidence",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6970959901809692,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8035479950904847,
+  "claim": "Witnesses' evidence has already been recorded."
+}

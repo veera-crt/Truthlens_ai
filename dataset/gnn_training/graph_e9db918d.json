@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The viral video shows Minister Kirthana asking students in English about their father's profession.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "\u201cWhat is your father?\u201d is not standard English when the intention is to ask about a parent's occupation. The natural question is \u201cWhat does your ... The controversy erupted after a video showed her commenting on a student's English-speaking ability during a school visit, drawing criticism ... Tamil Nadu Minister S Keerthana has come under criticism after a video of her interacting with students during a school inspection went ...",
+      "url": "https://www.facebook.com/dtnext/videos/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1080931107710253/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/dtnext/videos/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1080931107710253/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6799335479736328,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7949667739868165,
+  "claim": "The viral video shows Minister Kirthana asking students in English about their father's profession."
+}

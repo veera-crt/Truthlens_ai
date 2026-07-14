@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister has defended her remarks.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Karnataka Minister Shivaraj Tangadagi in conversation with Times Now was seen advocating his slapping students chanting \"Modi Modi remark. STORY | Fadnavis defends minister Mahajan amid row over Operation Blue Star remarks; 'anti-Sikh riots a fact' India News: Uttar Pradesh minister Sanjay Nishad defended his controversial remark on Bihar CM Nitish Kumar's action with a woman's hijab, ...",
+      "url": "https://www.youtube.com/watch?v=I-cyADL__Dc",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=I-cyADL__Dc",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.454279363155365,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6821396815776826,
+  "claim": "The minister has defended her remarks."
+}

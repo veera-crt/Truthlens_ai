@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Police officers' evidence has already been recorded.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "prosecution case and only on the basis of the evidence of police officers conviction has been recorded and, therefore, close scrutiny ... required. Public acts can be recorded: Police officers performing their duties in ... evidence of a crime Recording a police officer is NOT a crime. The general rule is that the First Amendment protects a citizen's right to record an officer while they are carrying out their duties in a public setting.",
+      "url": "https://indiankanoon.org/search/?formInput=evidence%20of%20police%20officers",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://indiankanoon.org/search/?formInput=evidence%20of%20police%20officers",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7036423683166504,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8068211841583253,
+  "claim": "Police officers' evidence has already been recorded."
+}

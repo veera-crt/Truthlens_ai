@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Opposition parties accused Minister Kirthana of undermining students' confidence.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Viral Video Puts TVK Minister Keerthana Under Fire Political Row Intensifies in Tamil Nadu | News18. The opposition accused her of using ... children. The minister denied mocking students, saying her intent was to encourage confidence ... state minister Keerthana faces backlash over her visit to a government school, commenting on students' ability to speak in English",
+      "url": "https://www.youtube.com/watch?v=Vb_lQ6m_PMk",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=Vb_lQ6m_PMk",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5199595093727112,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7149797546863557,
+  "claim": "Opposition parties accused Minister Kirthana of undermining students' confidence."
+}

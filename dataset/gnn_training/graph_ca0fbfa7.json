@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee shall initiate directions for areas of investigation if required by the CBI.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Supreme Court, on Monday, ordered the Central Bureau of Investigation (CBI) to take over the probe into the recent Karur stampede. The ... It has formally ordered a CBI investigation and to ensure neutrality it has constituted a three member supervisory committee headed by retired ... The Supreme Court has not issued a temporary stay or a short term direction. It has formally ordered a CBI investigation and to ensure ...",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/amp/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/amp/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5849610567092896,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7474805283546448,
+  "claim": "The committee shall initiate directions for areas of investigation if required by the CBI."
+}

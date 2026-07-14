@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Injured individuals rescued from the Mumbai apartment building collapse were admitted to the hospital.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "#Gravitas | At least 19 people have died, and 14 have been injured after a 3-storey building collapsed in the heart of Mumbai. ... hospital during the operation. #Mumbai ... Six dead, several injured as 3-storey building collapses onto shanties amid heavy rain in Mumbai. Tragic chawl collapse in Mumbai's Mankhurd claims six lives, including five children, amid relentless monsoon rains.",
+      "url": "https://www.facebook.com/scroll.in/posts/the-collapse-occurred-at-830-pm-while-one-person-died-on-the-spot-five-succumbed/1558573242983282/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/scroll.in/posts/the-collapse-occurred-at-830-pm-while-one-person-died-on-the-spot-five-succumbed/1558573242983282/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5827264785766602,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7463632392883301,
+  "claim": "Injured individuals rescued from the Mumbai apartment building collapse were admitted to the hospital."
+}

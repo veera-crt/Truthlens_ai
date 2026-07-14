@@ -1,0 +1,70 @@
+name: AI PR Reviewer
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to review'
+        required: true
+        type: number
+
+# Only one review runs at a time per PR; a new push cancels the in-flight run.
+concurrency:
+  group: pr-review-${{ github.event.pull_request.number || inputs.pr_number }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    # Skip bots on automatic triggers (not applicable to manual dispatch)
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      !contains(fromJSON('["dependabot[bot]","renovate[bot]","github-actions[bot]"]'),
+                github.event.pull_request.user.login)
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5.5.0
+        with:
+          python-version: '3.11'
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+      - name: Install dependencies
+        run: pip install openai PyGithub PyYAML
+
+      - name: Run AI PR Review
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+          # ── OpenRouter ─────────────────────────────────────────────────────
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_PR_REVIEW_KEY }}
+          REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'qwen/qwen3-235b-a22b' }}
+          # ── Cost controls ──────────────────────────────────────────────────
+          MAX_DIFF_LINES: ${{ vars.MAX_DIFF_LINES || '800' }}
+          # ── PR metadata ────────────────────────────────────────────────────
+          # For workflow_dispatch the script fetches metadata itself via the API.
+          # For pull_request events GitHub populates all of these directly.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_FULL_NAME: ${{ github.repository }}
+          PR_NUMBER:   ${{ github.event.pull_request.number  || inputs.pr_number }}
+          PR_TITLE:    ${{ github.event.pull_request.title   || '' }}
+          PR_BODY:     ${{ github.event.pull_request.body    || '' }}
+          PR_AUTHOR:   ${{ github.event.pull_request.user.login || '' }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha  || '' }}
+          PR_ACTION:   ${{ github.event.action || 'opened' }}
+        run: |
+          # Download the reviewer script directly from the default branch via
+          # the GitHub API — no checkout needed, works on fork PRs too.
+          curl -fsSL \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.raw+json" \
+            "https://api.github.com/repos/$REPO_FULL_NAME/contents/.github/scripts/pr_reviewer.py" \
+            -o pr_reviewer.py
+          python pr_reviewer.py

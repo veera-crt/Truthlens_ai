@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister stated she herself had studied in a government school.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Minister responsible. Dharmendra Pradhan, Cabinet Minister. Deputy Ministers responsible. Sukanta Majumdar, Minister of State \u00b7 Jayant Chaudhary, Minister of ... According to reports, CM Vijay is making MPs' and MLAs' children study in government schools. Supporters say the move could improve ... Prime Minister Narendra Modi and leaders like Nara Chandrababu Naidu also studied in government schools, said Telangana Chief Minister A. Revanth Reddy.",
+      "url": "https://en.wikipedia.org/wiki/Ministry_of_Education_(India)",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://en.wikipedia.org/wiki/Ministry_of_Education_(India)",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4811488091945648,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6955744045972825,
+  "claim": "The minister stated she herself had studied in a government school."
+}

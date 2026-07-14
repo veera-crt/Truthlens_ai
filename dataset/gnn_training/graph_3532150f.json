@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A farmer from Vedharanyam committed suicide due to frustration over the government not fully waiving crop loans.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Solidarity with the farmers of Tamil Nadu protesting at Jantar Mantar demanding the waiver of their loans. Our dysfunctional agricultural policy ... The impact of the loan waiver has yet to kick in with payouts proceeding at a slow rate, say activists. Till March 7, Rs 13,782 crore had been ... Suicides by farmers increased after a loan waiver of Rs 70,000 crore was announced by the previous UPA government in 2008, Union minister ...",
+      "url": "https://www.facebook.com/PressTrustofIndia/posts/farmers-in-vedaranyam-nagapattinam-district-of-tamil-nadu-staged-a-unique-protes/1275611304770496/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/PressTrustofIndia/posts/farmers-in-vedaranyam-nagapattinam-district-of-tamil-nadu-staged-a-unique-protes/1275611304770496/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.40412020683288574,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6570601034164429,
+  "claim": "A farmer from Vedharanyam committed suicide due to frustration over the government not fully waiving crop loans."
+}

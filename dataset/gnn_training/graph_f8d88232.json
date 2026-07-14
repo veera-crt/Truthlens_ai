@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister stated she had studied in a government school.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Tamil Nadu Minister Faces Backlash After Publicly Testing Student's English At Government School. @TimesNow20 likes2.3K views12 hours ago more. Prime Minister Narendra Modi and leaders like Nara Chandrababu Naidu also studied in government schools, said Telangana Chief Minister A. Revanth Reddy. The current education minister is Dharmendra Pradhan, a member of the Council of Ministers. India has had a Ministry of Education since 1947, following ...",
+      "url": "https://www.youtube.com/watch?v=pw4_G_BtSZQ",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=pw4_G_BtSZQ",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.48202085494995117,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6960104274749757,
+  "claim": "The minister stated she had studied in a government school."
+}

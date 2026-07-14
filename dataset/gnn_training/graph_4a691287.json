@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Purnima Murli states that the identity of the student and the teacher could have been withheld.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Guru Purnima serves as a reminder of the profound impact teachers have on the lives of their students. Today, I am filled with immense gratitude ... Aaya Cruelty On Children At Purnima School Medchal District \u2026 dynamic Telugu news channel. Actor Murali Mohan Allegations were that the student, along with two others, had been caught blasting crackers in the school toilet, for which he had been scolded ...",
+      "url": "https://www.facebook.com/groups/1325200904592433/posts/1468177386961450/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/groups/1325200904592433/posts/1468177386961450/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4710635840892792,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6905317920446397,
+  "claim": "Purnima Murli states that the identity of the student and the teacher could have been withheld."
+}

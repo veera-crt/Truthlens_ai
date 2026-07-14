@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The India Meteorological Department (IMD) informed about the possibility of moderate rain in Tamil Nadu and Kerala until the 11th.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Fairly Widespread to Widespread rainfall likely over Kerala & Mahe during 7th-11th July; Forecast and warning for any day is valid from 0830 ... Moderate rain is likely to occur at isolated places with thunderstorm & lightning with gusty winds speed reaching 40-50 kmph at one or two places is likely ... IMD forecasts heavy rainfall over Arunachal Pradesh, Kerala, Tamil Nadu, Puducherry ... Heavy rain continues across Maharashtra; IMD issues red ...",
+      "url": "https://internal.imd.gov.in/section/nhac/dynamic/allindianew.pdf",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://internal.imd.gov.in/section/nhac/dynamic/allindianew.pdf",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7747829556465149,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8723914778232573,
+  "claim": "The India Meteorological Department (IMD) informed about the possibility of moderate rain in Tamil Nadu and Kerala until the 11th."
+}

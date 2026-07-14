@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Many fishermen were injured in the clash in Chinnammuttam, Kanyakumari district.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Two fishermen were injured after Indian Coast Guard (ICG) personnel fired at the boat they were travelling in off Vizhinjam coast near here\u00a0... A heated argument between the two groups escalated into stone pelting, resulting in injuries to fishermen. Following information about the clash ... ",
+      "url": "https://www.youtube.com/watch?v=oIrZXYCkSW4",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=oIrZXYCkSW4",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.597804605960846,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.753902302980423,
+  "claim": "Many fishermen were injured in the clash in Chinnammuttam, Kanyakumari district."
+}

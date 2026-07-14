@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The Supreme Court, in paragraph 33, formed a three-member committee for the Karur case.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "In the earlier ruling, the Supreme Court had set up a three-member Supervisory Committee led by former Supreme Court Judge Justice Ajay Rastogi, ... The probe will be monitored by a three member supervisory committee headed by retired Supreme Court Judge Ajay Rastogi with two IPS officers ... The probe will be monitored by a three member supervisory committee headed by retired Supreme Court Judge Ajay Rastogi with two IPS officers ...",
+      "url": "https://legaleagleweb.com/newsdetail.aspx?newsid=9417",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://legaleagleweb.com/newsdetail.aspx?newsid=9417",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4536811113357544,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6818405556678773,
+  "claim": "The Supreme Court, in paragraph 33, formed a three-member committee for the Karur case."
+}

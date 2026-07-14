@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The Dravida Munnetra Kazhagam (DMK) has filed a petition.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Dravida Munnetra Kazhagam (DMK), through its Organising Secretary, Thiru R.S. Bharathi, has filed Petition before the Hon'ble Supreme ... Soon thereafter, a suit came to be filed in CS No.858 of 2017 by the faction of the party viz. All India Anna Dravida Munnetra Kazhagam (Amma) represented by ... That it is respectfully submitted that the Impugned Amendment Act is violative of Articles 14, 15, 19, 21, 25, 26, 29, 30, 300A as well as the ...",
+      "url": "https://x.com/arivalayam/status/2072985896303907258",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://x.com/arivalayam/status/2072985896303907258",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.699765682220459,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8048828411102296,
+  "claim": "The Dravida Munnetra Kazhagam (DMK) has filed a petition."
+}

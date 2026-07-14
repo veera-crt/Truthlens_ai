@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The BJP and the DMK state that inspecting schools is not bad, but making a viral reel out of it is bad.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Tamil Nadu Minister S Keerthana has come under criticism after a video of her interacting with students during a school inspection went viral. We simply don't understand why DMK wants to oppose the delimitation. It is very clear... DMK is doing this drama because they are against women, ... Critics accused her of embarrassing students and turning the inspection into a public spectacle, while others questioned her own English ...",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5069029331207275,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7084514665603638,
+  "claim": "The BJP and the DMK state that inspecting schools is not bad, but making a viral reel out of it is bad."
+}

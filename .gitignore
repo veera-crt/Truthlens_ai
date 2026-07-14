@@ -1,0 +1,30 @@
+venv/
+__pycache__/
+*.log
+.env
+temp_audio/
+Server/temp_audio/
+Server/dataset/
+*.mp4
+*.mp3
+*.wav
+*.zip
+.DS_Store
+
+# Secrets and credentials
+service_account.json
+
+# Chrome extension builds and keys
+extension.pem
+extension.crx
+
+# Local scratch files
+scratch_*.py
+cleanup.py
+READMEOLD>md
+newupdates.txt
+modules/Helpers/nlp_analysis_result.json
+modules/Helpers/test_insta.py
+modules/Helpers/test_nlp.py
+modules/Helpers/transcript.txt
+Server/transcript.txt

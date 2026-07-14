@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee shall have the liberty to review evidence collected by the CBI from time to time.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Court held that the Karur incident, which has shaken the national conscience, deserves fair and impartial CBI investigation. A Supreme Court-appointed committee led by retired apex court judge Justice Ajay Rastogi on Tuesday began a three-day review in Karur to oversee ... The Supreme Court has not issued a temporary stay or a short term direction. It has formally ordered a CBI investigation and to ensure ...",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4745783507823944,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6922891753911973,
+  "claim": "The committee shall have the liberty to review evidence collected by the CBI from time to time."
+}

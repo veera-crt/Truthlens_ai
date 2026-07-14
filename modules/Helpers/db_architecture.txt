@@ -1,0 +1,5 @@
+============================================================
+DATABASE ARCHITECTURE AND DATA DUMP
+============================================================
+
+No tables found in the 'public' schema.

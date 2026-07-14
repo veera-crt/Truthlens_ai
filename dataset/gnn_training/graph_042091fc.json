@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "If the committee advises the Dravida Munnetra Kazhagam (DMK), the petitions would be withdrawn.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "... DMK withdrew its petition. The opposition party maintained that the development is not a setback, stating they have full confidence in the ... In its plea, the DMK had sought directions to restrain TVK ministers from commenting on the probe or extending welfare benefits to the family of ... \"The DMK is doing everything possible to stop Chief Minister Vijay's visit to Karur even now,\" he alleged, after the Supreme Court proceedings.",
+      "url": "https://www.youtube.com/watch?v=pz6i3oI4MUs",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=pz6i3oI4MUs",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.653661847114563,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7818309235572816,
+  "claim": "If the committee advises the Dravida Munnetra Kazhagam (DMK), the petitions would be withdrawn."
+}

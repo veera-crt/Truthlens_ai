@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister stated she was trying to highlight poor education standards during the DMK rule.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Union Education Minister Dharmendra Pradhan accused the Dravida Munnetra Kazhagam (DMK)-led Tamil Nadu government of spreading lies in Parliament. DMK transformed access to education in Tamil Nadu by implementing free education, including graduation, and provided travel allowances to students. In 2010, ... Tamil Nadu's Governor R.N. Ravi has criticized the state's education model, claiming that the standard of teaching is declining.",
+      "url": "https://www.facebook.com/airnewsalerts/posts/union-education-minister-dharmendra-pradhan-accused-the-dravida-munnetra-kazhaga/1014025160921185/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/airnewsalerts/posts/union-education-minister-dharmendra-pradhan-accused-the-dravida-munnetra-kazhaga/1014025160921185/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.587885320186615,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7489426600933076,
+  "claim": "The minister stated she was trying to highlight poor education standards during the DMK rule."
+}

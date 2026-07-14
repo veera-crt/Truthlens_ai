@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The BJP spokesperson states there are different ways to assess the standard of the education system.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The assessment tools (including assessment \u201cas\u201d, \u201cof\u201d, and \u201cfor\u201d learning) will also be aligned with the learning outcomes, capabilities, and dispositions as ... BJP Vs Opposition On The National Education Policies | NEP Status In Karnataka | NEET Exam | N18V Karnataka Chief Minister, Siddaramaiah on ... Underinvestment \u2013 Inadequate funding, poor infrastructure, and lack of basic facilities have weakened confidence in government schools.",
+      "url": "https://static.pib.gov.in/WriteReadData/userfiles/NEP_Final_English_0.pdf",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://static.pib.gov.in/WriteReadData/userfiles/NEP_Final_English_0.pdf",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6001176834106445,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7850588417053221,
+  "claim": "The BJP spokesperson states there are different ways to assess the standard of the education system."
+}

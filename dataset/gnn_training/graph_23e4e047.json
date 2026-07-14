@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Normal life in Mumbai is affected by continuous heavy rains.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Mumbai remained on high alert on Monday, warning of heavy rainfall and strong winds. intense rain is expected to continue through the day. Share your videos with friends, family, and the world. Due to continuous heavy rainfall has caused severe flooding across the area, submerging roads and significantly disrupting daily life.",
+      "url": "https://www.youtube.com/watch?v=0KI8I2qko8c",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=0KI8I2qko8c",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7173678874969482,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8136839437484742,
+  "claim": "Normal life in Mumbai is affected by continuous heavy rains."
+}

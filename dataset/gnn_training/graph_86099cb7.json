@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister had gone on an inspection to the government school.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "A classroom inspection by TVK IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video ... A classroom inspection by TVK IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video ... Keerthana on Tuesday strongly defended herself against criticism over her interaction with a student during a recent inspection at a government ...",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5424283742904663,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7262141871452332,
+  "claim": "The minister had gone on an inspection to the government school."
+}

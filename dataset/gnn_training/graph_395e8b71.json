@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "ADMK Deputy General Secretary K.P. Munusamy criticized Vijay Bhaskars who joined 'Thavaikka' as 'Odu Kaligal'.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "\u0bb5\u0bbf\u0b9c\u0baf\u0bcd \u0baa\u0bc7\u0b9a\u0bcd\u0b9a\u0bc8 \u0b8e\u0ba4\u0bbf\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4 KP Munusamy! | TVK Vijay. Munusamy claimed Vijay attracted young voters through Instagram reels, emotional messaging, and cinematic narratives. He stated that a section ... KP Munusamy about TVK Vijay | \u0bb5\u0bbf\u0b9c\u0baf\u0bc8 \u0bae\u0bb1\u0bc8\u0bae\u0bc1\u0b95\u0bae\u0bbe\u0b95 \u0b9a\u0bbe\u0b9f\u0bbf\u0baf \u0b95\u0bc7.\u0baa\u0bbf.\u0bae\u0bc1\u0ba9\u0bc1\u0b9a\u0bbe\u0bae\u0bbf | #KPMunusamy | #VijaySpeech | #TNPolitics | #ADMKEPS | #TamilNews | #News18TamilNadu.",
+      "url": "https://www.youtube.com/shorts/fY8zcTl2KyE",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/shorts/fY8zcTl2KyE",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5587961673736572,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7343980836868287,
+  "claim": "ADMK Deputy General Secretary K.P. Munusamy criticized Vijay Bhaskars who joined 'Thavaikka' as 'Odu Kaligal'."
+}

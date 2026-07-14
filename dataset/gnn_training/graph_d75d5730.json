@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee shall monitor the investigation transferred to the CBI.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The probe will be monitored by a three member supervisory committee headed by retired Supreme Court Judge Ajay Rastogi with two IPS officers ... The panel is empowered to issue directions to ensure a fair, impartial, and transparent probe, and will receive monthly progress reports ... The Court said the committee \u201cshall monitor the investigation of the CBI and may undertake enquiry into any matter incidental to the stampede.\u201d",
+      "url": "https://www.facebook.com/livelaw.in/posts/in-the-karur-stampede-case-the-supreme-court-today-refused-to-modify-its-earlier/1298686138963081/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/livelaw.in/posts/in-the-karur-stampede-case-the-supreme-court-today-refused-to-modify-its-earlier/1298686138963081/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.699496865272522,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8047484326362611,
+  "claim": "The committee shall monitor the investigation transferred to the CBI."
+}

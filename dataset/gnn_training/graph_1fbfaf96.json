@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee shall devise its own procedure as per the direction of the Honorable Former Judge.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "It added that the committee would be free to \u201cdevise its own procedure as per the directions of the judge.\u201d The CBI has been directed to submit ... In the Karur Stampede case, the Supreme Court today refused to modify its earlier direction that members of the Supervisory Committee ... The Supreme Court, on Monday, ordered the Central Bureau of Investigation (CBI) to take over the probe into the recent Karur stampede.",
+      "url": "https://lawbeat.in/top-stories/karur-stampede-sc-orders-cbi-probe-forms-committee-headed-by-justice-ajay-rastogi-to-monitor-investigation-1534146",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://lawbeat.in/top-stories/karur-stampede-sc-orders-cbi-probe-forms-committee-headed-by-justice-ajay-rastogi-to-monitor-investigation-1534146",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.43430280685424805,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6721514034271241,
+  "claim": "The committee shall devise its own procedure as per the direction of the Honorable Former Judge."
+}

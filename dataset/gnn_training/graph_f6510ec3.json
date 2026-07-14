@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee may undertake an inquiry into matters ancillary and incidental to the Karur case.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Number four is the committee may undertake an inquiry into the matter ancillary incidental to the Karur stampede which might be necessary to ... The court said the committee would function under Justice Rastogi's directions and may \u201cundertake an inquiry into any matter ancillary or ... The Supreme Court has granted a committee full authority to oversee the CBI's investigation into the Karur stampede case, ensuring a fair ...",
+      "url": "https://x.com/ANI/status/2074391077457686784",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://x.com/ANI/status/2074391077457686784",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7481366395950317,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8290683197975159,
+  "claim": "The committee may undertake an inquiry into matters ancillary and incidental to the Karur case."
+}

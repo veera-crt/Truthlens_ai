@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A minister from the TVK spoke to students in English in the circulating video.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The uploader has not made this video ... TVK Minister's English Test Sparks Row | DMK, BJP Accuse Keerthana Of Humiliating Student. Tamil Nadu School Row: TVK Minister's English Remark Sparks DMK vs TVK Political Clash | News9 ... TVK Vijay | CMVijay First Speech. Polimer ... TVK minister's video on 'spoken English' during school inspection sparks clash with DMK. DMK, BJP accuse Keerthana Sampath of humiliating ...",
+      "url": "https://www.youtube.com/watch?v=NVZI3dMSehA",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=NVZI3dMSehA",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5389431118965149,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7244715559482575,
+  "claim": "A minister from the TVK spoke to students in English in the circulating video."
+}

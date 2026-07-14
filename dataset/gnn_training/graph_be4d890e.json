@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The identity of a teacher and a student was revealed in relation to the incident highlighted by the TVK government.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "A classroom inspection by TVK IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video ... student's English proficiency during an inspection of a government girls' high school near Sivakasi. The incident took place during the ... Video shows TVK cadres distributing gifts with party's identity to govt school students, draws flak. One of the female functionaries is seen ...",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6162585616111755,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7631292808055878,
+  "claim": "The identity of a teacher and a student was revealed in relation to the incident highlighted by the TVK government."
+}

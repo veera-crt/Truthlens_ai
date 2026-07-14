@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Australia defeated England in the Women's T20 World Cup final to win the championship for the seventh time.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Australia dominated England to win the Women's T20 World Cup final by seven wickets, chasing 151 with 17 balls to spare. For the seventh time, Australia have won the Women's T20 World Cup, beating England by seven wickets. You can read Matthew Henry's report ... Highest Score in T20WC Final. For the seventh time, Australia secure the Women's #T20WorldCup crown 00:43 CHAMPIONS,",
+      "url": "https://www.instagram.com/reel/DacY91UjuLg/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/reel/DacY91UjuLg/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.8558931946754456,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8829465973377228,
+  "claim": "Australia defeated England in the Women's T20 World Cup final to win the championship for the seventh time."
+}

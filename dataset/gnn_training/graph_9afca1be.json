@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The DMK and the BJP are hitting out at the TVK and the minister.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "DMK leader M.K. Stalin has strongly criticized the TVK government led by Chief Minister C. Joseph Vijay, calling it a \"Xerox copy\" of the BJP. Stalin ... Congress Ministers hit back at DMK after facing persistent criticism for joining TVK-led govt. Their joint statement says the DMK must ... Udhayanidhi criticized the ministers by listing them.. DMK members laughed and laughed | Dmk vs Tvk",
+      "url": "https://www.facebook.com/theinfomance/posts/dmk-leader-mk-stalin-has-strongly-criticized-the-tvk-government-led-by-chief-min/985525267443411/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/theinfomance/posts/dmk-leader-mk-stalin-has-strongly-criticized-the-tvk-government-led-by-chief-min/985525267443411/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6390534043312073,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7745267021656037,
+  "claim": "The DMK and the BJP are hitting out at the TVK and the minister."
+}

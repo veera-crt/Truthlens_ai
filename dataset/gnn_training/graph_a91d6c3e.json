@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The speaker states that the quality of education in government schools was very bad during the DMK period.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "In 2010, higher education in government colleges became free. These efforts expanded education to rural areas, creating new colleges. Creation of a separate ... The DMK Government in TN lacks the vision to upgrade Educational Infrastructure in Government Schools/Colleges in Tamil Nadu, which would ... The truth is, the scheme was first launched by #AIADMK under the leadership of Hon'ble Annan #PuratchiThamizhar_Edappadiyar Avl in 2019, ...",
+      "url": "https://www.dmk.in/en/achievements/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.dmk.in/en/achievements/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contradicts",
+      "weight": 0.37752097845077515,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.4437604892253876,
+  "claim": "The speaker states that the quality of education in government schools was very bad during the DMK period."
+}

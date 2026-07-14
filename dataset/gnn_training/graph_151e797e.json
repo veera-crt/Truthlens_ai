@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Many people are questioning why the student's confidence should be affected by the minister's interaction.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Union Education Minister Dharmendra Pradhan today said that the incident of paper leak was extremely unfortunate and should not have ... ... impact of proposed reforms to immigration rules that affect international students ... PMQs LIVE: Prime Minister's Questions - 1 July 2026. UK ... What do you think? Should education reforms stay completely free from political influence, or is public scrutiny necessary for accountability?",
+      "url": "https://www.facebook.com/statesentinelnews/posts/union-education-minister-dharmendra-pradhan-today-said-that-the-incident-of-pape/1299884565664352/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/statesentinelnews/posts/union-education-minister-dharmendra-pradhan-today-said-that-the-incident-of-pape/1299884565664352/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5006549954414368,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7053274977207185,
+  "claim": "Many people are questioning why the student's confidence should be affected by the minister's interaction."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Purnima Murli states that many individuals are sharing the student's image on social media platforms without blurring it, which has led to the revelation of the student's identity.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Bengaluru student's private photos leaked on adult sites, Reddit; alleged hacker demanded more images to remove them and threatened fake ... Taking a firm stand against online abuse, Renu revealed that she has already taken legal action against several individuals with the help of ... Her research areas include Blockchain & dApp development, SDN/NFV for 5G/6G, Quantum Internet, Traffic engineering, and Secure routing.",
+      "url": "https://timesofindia.indiatimes.com/city/bengaluru/modelling-dream-turns-nightmare-as-bengaluru-students-intimate-photos-leak-online/articleshow/132140990.cms",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://timesofindia.indiatimes.com/city/bengaluru/modelling-dream-turns-nightmare-as-bengaluru-students-intimate-photos-leak-online/articleshow/132140990.cms",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.40452131628990173,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6572606581449509,
+  "claim": "Purnima Murli states that many individuals are sharing the student's image on social media platforms without blurring it, which has led to the revelation of the student's identity."
+}

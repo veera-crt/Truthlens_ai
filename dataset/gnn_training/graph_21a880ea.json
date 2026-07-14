@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Narayan Tirupati of the BJP stated there is existing machinery to highlight issues like poor English standards.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "'DMK Trying To Cover Up Problems', BJP's Narayan Tirupati On Language War His remarks add weight to the opposition's growing focus on federalism and centre-state relations as a key national issue. No photo description ... BJP's Narayanan Thirupathy responds to the allegations of Binoy Viswam. the farmers that you know agitation she was raped and killed.",
+      "url": "https://www.youtube.com/watch?v=58nfDEav39g",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=58nfDEav39g",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4798204302787781,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6949102151393891,
+  "claim": "Narayan Tirupati of the BJP stated there is existing machinery to highlight issues like poor English standards."
+}

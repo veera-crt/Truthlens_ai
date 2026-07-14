@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "R.S. Bharathi had previously stated in a petition that a contempt of court case would be filed.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Contempt Petition on hand has been instituted under Section 15 of Contempts of Courts Act, 1971, to initiate proceedings for criminal 1 1951 AIR 226 2 1966 ... The Madras High Court on Friday dismissed a contempt of court petition filed by YouTuber 'Savukku' Shankar alias A. Shankar against DMK leader RS Bharathi. Plea Before Madras High Court Seeks Initiation of Criminal Contempt Proceedings Against DMK Leader RS Bharathi For Remarks Against Justice ...",
+      "url": "https://indiankanoon.org/doc/85307566/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://indiankanoon.org/doc/85307566/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7519016861915588,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8309508430957795,
+  "claim": "R.S. Bharathi had previously stated in a petition that a contempt of court case would be filed."
+}

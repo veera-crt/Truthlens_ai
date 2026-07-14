@@ -1,0 +1,43 @@
+# Core Server & Web
+flask>=3.0.3
+flask-cors>=4.0.1
+requests>=2.32.3
+python-dotenv>=1.0.1
+beautifulsoup4>=4.12.3
+
+# Phase 1: Deep Transcription
+yt-dlp>=2024.04.10
+static-ffmpeg>=2.5
+youtube-transcript-api>=0.6.2
+
+# Phase 2: Social Harvest
+instaloader>=4.10.1
+snscrape>=0.7.0
+
+# Phase 3: Forensic NLP (Local + Cloud)
+torch>=2.0.0
+transformers>=4.30.0
+google-generativeai>=0.4.0
+sentence-transformers>=2.2.2
+
+# Phase 4: Fact-Check / Ground Truth / Visual
+tavily-python>=0.3.3
+gspread>=6.0.0
+Pillow>=10.4.0
+opencv-python-headless>=4.10.0.84
+numpy>=1.26.4
+
+# Phase 5: GNN Coordination Network
+networkx>=3.2.1
+torch-geometric>=2.3.0
+scikit-learn>=1.3.0
+
+# Additional missing dependencies
+pandas>=2.0.0
+apscheduler>=3.10.0
+pydub>=0.25.1
+audioop-lts>=0.2.2; python_version >= "3.13"
+faster-whisper>=0.6.0
+openai-whisper>=20231117
+youtube-comment-downloader>=0.7.7
+

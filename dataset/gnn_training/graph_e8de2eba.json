@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Nirmal Kumar returned frustrated from a minister's event in Kaveri K because no one was on stage.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Nirmal Kumar Angry | TVK MLAs Absent... CTR walks out in frustration! Stir at government event. @abpnadu38 likes8.1K views2 days ago Minister Nirmal Kumar Speech | \u201c\u0ba4\u0bc1\u0ba3\u0bcd\u0b9f\u0bc1 \u0b9a\u0bc0\u0b9f\u0bcd\u0b9f\u0bc1 \u0b95\u0bca\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1 Transfer \u0ba8\u0b9f\u0bc8\u0bae\u0bc1\u0bb1\u0bc8 \u0b95\u0bbf\u0b9f\u0bc8\u0baf\u0bbe\u0ba4\u0bc1\u201c. 1.1K views \u00b7 2 weeks ago. #Nirmalkumar #TamilNews #News18TamilNadu ...more ... TVK leader CTR Nirmal Kumar, in an exclusive conversation with India Today, alleges that state officials have been compromised by the DMK.",
+      "url": "https://www.youtube.com/watch?v=OqKZlkBFqn4",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=OqKZlkBFqn4",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5513752698898315,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7306876349449158,
+  "claim": "Nirmal Kumar returned frustrated from a minister's event in Kaveri K because no one was on stage."
+}

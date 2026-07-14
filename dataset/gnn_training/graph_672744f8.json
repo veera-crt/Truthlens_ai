@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee shall supervise the investigation to ensure it reaches its logical conclusion.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Anjaria constituted a three-member Supervisory Committee headed by retired Supreme Court judge Justice Ajay Rastogi, alongside two senior IPS ... It has formally ordered a CBI investigation and to ensure neutrality it has constituted a three member supervisory committee headed by retired ... The Supreme Court on October 13 2025 ordered a CBI inquiry into the September 27 2025 karut stampede in which 41 people lost their lives.",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/amp/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/amp/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contradicts",
+      "weight": 0.3876644968986511,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.44883224844932557,
+  "claim": "The committee shall supervise the investigation to ensure it reaches its logical conclusion."
+}

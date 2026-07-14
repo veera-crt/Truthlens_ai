@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Purnima Murli states that the minister commented that the student's English should improve due to its poor quality.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "... improve the education system because our core issue is that to keep the quality education to our student. English Transcript. See, it is a ... Education Minister Robert Halfon said imposing restrictions would encourage universities to improve course quality. Labour said the move ... A political controversy has erupted in Tamil Nadu after Industries Minister S. Keerthana publicly tested a student's English proficiency ...",
+      "url": "https://www.instagram.com/reel/DWoZbk5u4jj/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/reel/DWoZbk5u4jj/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5132647156715393,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7116323578357697,
+  "claim": "Purnima Murli states that the minister commented that the student's English should improve due to its poor quality."
+}

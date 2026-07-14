@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Minister Kirthana defended her comments, stating they were aimed at highlighting educational standards.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Keerthana questions a student in English and later claims the student was unable to answer, citing it as evidence of poor learning standards in\u00a0... Keerthana reprimands the teachers and kids for being poor in English while also pointing out that the last benchers might be worse. Tamil Nadu Minister S Keerthana has come under criticism after a video of her interacting with students during a school inspection went viral.",
+      "url": "https://www.youtube.com/watch?v=uPS-hnKqWJw",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=uPS-hnKqWJw",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.48801189661026,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6990059483051301,
+  "claim": "Minister Kirthana defended her comments, stating they were aimed at highlighting educational standards."
+}

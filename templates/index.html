@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthLens — Virality Risk Intelligence Platform</title>
+  <meta name="description"
+    content="TruthLens by Unisys — Real-time YouTube trending analysis with AI-powered virality risk scoring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-deep: #060b18;
+      --bg-base: #0d1425;
+      --bg-surface: #111c33;
+      --bg-card: #15213d;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-hover: rgba(99, 179, 237, 0.35);
+      --accent: #3b82f6;
+      --accent-2: #6366f1;
+      --text-primary: #e8edf5;
+      --text-secondary: #7a8ca8;
+      --text-muted: #4a5c75;
+      --low: #22c55e;
+      --low-bg: rgba(34, 197, 94, 0.08);
+      --low-border: rgba(34, 197, 94, 0.25);
+      --med: #f59e0b;
+      --med-bg: rgba(245, 158, 11, 0.08);
+      --med-border: rgba(245, 158, 11, 0.25);
+      --high: #ef4444;
+      --high-bg: rgba(239, 68, 68, 0.08);
+      --high-border: rgba(239, 68, 68, 0.25);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+      background: rgba(6, 11, 24, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .nav-brand-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .nav-brand-text span {
+      font-weight: 300;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      display: block;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid var(--low-border);
+      color: var(--low);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--low);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+      }
+    }
+
+    .nav-unisys {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 56px 32px 36px;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-left h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .hero-left h1 .gradient {
+      background: linear-gradient(90deg, #60a5fa, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-left p {
+      margin-top: 10px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 400;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #a5b4fc;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── STAT BAR ── */
+    .stat-bar {
+      max-width: 1280px;
+      margin: 0 auto 36px;
+      padding: 0 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .stat-card {
+      flex: 1;
+      min-width: 140px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .stat-card .stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .stat-card .stat-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .stat-card .stat-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .stat-card.high-risk .stat-value {
+      color: var(--high);
+    }
+
+    .stat-card.med-risk .stat-value {
+      color: var(--med);
+    }
+
+    .stat-card.low-risk .stat-value {
+      color: var(--low);
+    }
+
+    .search-container {
+      max-width: 1280px;
+      margin: 0 auto 24px;
+      padding: 0 32px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--border-hover);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    .search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 6px 0;
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-icon {
+      color: var(--text-secondary);
+      margin-right: 12px;
+      font-size: 1.1rem;
+    }
+
+    .refresh-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      margin-left: auto;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .refresh-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .refresh-btn:active {
+      transform: translateY(0);
+    }
+
+    .refresh-btn.loading {
+      opacity: 0.7;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* ── FILTER BAR ── */
+
+
+    .filter-bar {
+      max-width: 1280px;
+      margin: 0 auto 28px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-right: 4px;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #93c5fd;
+    }
+
+    .filter-btn.active {
+      font-weight: 600;
+    }
+
+    /* ── GRID ── */
+    .grid-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      border-color: var(--border-hover);
+    }
+
+    .card-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover .card-thumb img {
+      transform: scale(1.04);
+    }
+
+    .thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(6, 11, 24, 0.7) 0%, transparent 50%);
+    }
+
+    .risk-chip {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    .risk-chip.risk-low {
+      background: var(--low-bg);
+      color: var(--low);
+      border: 1px solid var(--low-border);
+    }
+
+    .risk-chip.risk-med {
+      background: var(--med-bg);
+      color: var(--med);
+      border: 1px solid var(--med-border);
+    }
+
+    .risk-chip.risk-high {
+      background: var(--high-bg);
+      color: var(--high);
+      border: 1px solid var(--high-border);
+    }
+
+    .credibility-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      align-self: flex-start;
+    }
+
+    .cred-high {
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .cred-medium {
+      background: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .cred-low {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fde047;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    .reason-tag {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: 12px;
+      border: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+
+
+    .card-rank {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+    .card-title.truncated {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-title.expanded {
+      display: block;
+      overflow: visible;
+    }
+    .expand-title-btn {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 2px 0;
+      margin-bottom: 8px;
+      align-self: flex-start;
+      transition: opacity 0.2s;
+    }
+    .expand-title-btn:hover {
+      opacity: 0.8;
+    }
+
+
+    .card-channel {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-channel::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      flex-shrink: 0;
+    }
+
+    .card-stats {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-views {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .card-views strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .risk-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .risk-dot.risk-low {
+      background: var(--low);
+      box-shadow: 0 0 6px var(--low);
+    }
+
+    .risk-dot.risk-med {
+      background: var(--med);
+      box-shadow: 0 0 6px var(--med);
+    }
+
+    .risk-dot.risk-high {
+      background: var(--high);
+      box-shadow: 0 0 6px var(--high);
+    }
+
+    /* ── RISK METER ── */
+    .risk-bar-wrap {
+      margin-top: 8px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--border);
+      overflow: hidden;
+    }
+
+    .risk-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.6s ease;
+    }
+
+    /* ── LOADER ── */
+    .loader-wrap {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      gap: 16px;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ── ERROR ── */
+    .error-wrap {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+
+    .error-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .error-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--high);
+      margin-bottom: 6px;
+    }
+
+    .error-sub {
+      font-size: 0.85rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-left {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-left strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .footer-phases {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .phase-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .phase-tag.active {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      color: #93c5fd;
+    }
+
+    .phase-tag.inactive {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .hacker-panel {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      width: 320px;
+      height: 200px;
+      background: rgba(6, 11, 24, 0.95);
+      border: 1px solid #22c55e;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #22c55e;
+      font-size: 0.75rem;
+      overflow-y: hidden;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    .hacker-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #22c55e;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hacker-log {
+      height: 150px;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .hacker-log::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hacker-line {
+      margin-bottom: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #4ade80;
+    }
+
+    .hacker-blink {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* ── RESPONSIVE NAV ── */
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 0 16px;
+      }
+
+      .nav-unisys {
+        display: none;
+      }
+
+      .hero {
+        padding: 36px 16px 24px;
+      }
+
+      .stat-bar {
+        padding: 0 16px;
+      }
+
+      .filter-bar {
+        padding: 0 16px;
+      }
+
+      .grid-wrapper {
+        padding: 0 16px 40px;
+      }
+
+      footer {
+        padding: 20px 16px;
+      }
+
+      .hero-left h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-brand" href="#">
+      <div class="nav-logo">🔍</div>
+      <div class="nav-brand-text">
+        TruthLens
+
+      </div>
+    </a>
+    <div class="nav-right">
+      <div class="nav-badge">
+        <div class="pulse"></div> Live
+      </div>
+      <div class="nav-clock" id="realTimeClock" style="font-family: monospace; color: #4ade80; font-weight: 700; letter-spacing: 1.5px; margin-left: 16px; background: rgba(6, 11, 24, 0.6); border: 1px solid rgba(74, 222, 128, 0.3); padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; box-shadow: 0 0 10px rgba(74, 222, 128, 0.1);">00:00:00</div>
+    </div>
+
+  </nav>
+
+  <div class="hacker-panel" id="hackerPanel">
+    <div class="hacker-header">
+      <span>📡 Live Viral Stream</span>
+      <span class="hacker-blink">_</span>
+    </div>
+    <div class="hacker-log" id="hackerLog">
+      <div class="hacker-line">> Predictive engine armed...</div>
+    </div>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>YouTube Trending <span class="gradient">Risk Intelligence</span></h1>
+      <p>Real-time virality analysis on trending content. Identify misleading or high-risk videos before they spread.
+      </p>
+      <div class="hero-meta">
+        <span class="tag">Phase 1</span>
+        <span class="tag">Virality Risk Engine</span>
+        <span class="tag">YouTube Data API</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT BAR HIDDEN -->
+
+
+  <!-- SEARCH BAR -->
+  <div class="search-container" id="searchBar" style="display:none;">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search videos by title or channel..." onkeyup="handleSearch()">
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+
+  <div class="filter-bar" id="filterBar" style="display:none;">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" id="f-all" onclick="applyFilter('ALL')">All</button>
+    <button class="filter-btn" id="f-HIGH" onclick="applyFilter('HIGH')">🔴 High Risk</button>
+    <button class="filter-btn" id="f-MEDIUM" onclick="applyFilter('MEDIUM')">🟡 Medium</button>
+    <button class="filter-btn" id="f-LOW" onclick="applyFilter('LOW')">🟢 Safe</button>
+    <button class="refresh-btn" id="refreshBtn" onclick="fetchNewContent()">🔄 Refresh Content</button>
+  </div>
+
+
+  <!-- GRID -->
+  <div class="grid-wrapper">
+    <div class="grid" id="videoGrid">
+      <div class="loader-wrap" id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text">Fetching & analyzing trending data…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER REMOVED -->
+
+
+  <script>
+    let allVideos = [];
+    let activeFilter = 'ALL';
+
+    function riskMeta(risk) {
+      if (risk === 'HIGH') return { cls: 'risk-high', label: 'High Risk', bar: '85%', color: '#ef4444' };
+      if (risk === 'MEDIUM') return { cls: 'risk-med', label: 'Medium', bar: '50%', color: '#f59e0b' };
+      return { cls: 'risk-low', label: 'Safe', bar: '15%', color: '#22c55e' };
+    }
+
+    function renderCards(videos) {
+      const grid = document.getElementById('videoGrid');
+      grid.innerHTML = '';
+
+      if (!videos.length) {
+        grid.innerHTML = `<div class="error-wrap"><div class="error-icon">🔍</div><div class="error-title">No results</div><div class="error-sub">Try a different filter.</div></div>`;
+        return;
+      }
+
+      videos.forEach((video, i) => {
+        const r = riskMeta(video.risk);
+        const views = !isNaN(video.views) ? Number(video.views).toLocaleString() : video.views;
+        const card = document.createElement('div');
+        card.className = 'card';
+        let credClass = 'cred-low';
+        let credLabel = '⚠️ Unverified Channel';
+        if (video.channel_type === 'Verified') {
+          credClass = 'cred-high';
+          credLabel = '✅ Verified Channel';
+        } else if (video.channel_type === 'Moderate') {
+          credClass = 'cred-medium';
+          credLabel = 'Moderate Channel';
+        }
+
+
+        card.innerHTML = `
+      <div class="card-thumb">
+        <img src="${video.thumbnail}" alt="${video.title}" loading="lazy">
+        <div class="thumb-overlay"></div>
+        <span class="card-rank">#${i + 1} Trending</span>
+      </div>
+      <div class="card-body">
+        <span class="credibility-badge ${credClass}">${credLabel}</span>
+        <div class="card-title truncated" id="title-${i}">${video.title}</div>
+        <button class="expand-title-btn" id="btn-${i}" onclick="toggleTitle(${i})">Expand</button>
+        <div class="card-channel">${video.channel}</div>
+
+        <div class="card-stats">
+          <div class="card-views"><strong>${views}</strong> views</div>
+        </div>
+      </div>`;
+
+
+        grid.appendChild(card);
+      });
+    }
+
+    function toggleTitle(index) {
+      const titleEl = document.getElementById(`title-${index}`);
+      const btnEl = document.getElementById(`btn-${index}`);
+      if (titleEl.classList.contains('truncated')) {
+        titleEl.classList.remove('truncated');
+        titleEl.classList.add('expanded');
+        btnEl.textContent = 'Collapse';
+      } else {
+        titleEl.classList.add('truncated');
+        titleEl.classList.remove('expanded');
+        btnEl.textContent = 'Expand';
+      }
+    }
+
+    function applyFilter(f) {
+
+      activeFilter = f;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(f === 'ALL' ? 'f-all' : `f-${f}`).classList.add('active');
+      const filtered = f === 'ALL' ? allVideos : allVideos.filter(v => v.risk === f);
+      renderCards(filtered);
+    }
+
+    function handleSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+
+      const filtered = allVideos.filter(v => {
+        const matchesQuery = v.title.toLowerCase().includes(query) ||
+          v.channel.toLowerCase().includes(query);
+
+        const matchesFilter = activeFilter === 'ALL' || v.risk === activeFilter;
+        return matchesQuery && matchesFilter;
+      });
+
+      renderCards(filtered);
+    }
+
+    function fetchNewContent() {
+      const refreshBtn = document.getElementById('refreshBtn');
+      const grid = document.getElementById('videoGrid');
+
+      refreshBtn.classList.add('loading');
+      refreshBtn.textContent = '🔄 Fetching...';
+
+      grid.innerHTML = `
+    <div class="loader-wrap" id="loader">
+      <div class="spinner"></div>
+      <div class="loader-text">Refreshing real-time intelligence feeds...</div>
+    </div>`;
+
+      fetch('/trending')
+        .then(r => r.json())
+        .then(data => {
+          refreshBtn.classList.remove('loading');
+          refreshBtn.innerHTML = '🔄 Refresh Content';
+          allVideos = data;
+          updateStats(data);
+          renderCards(data);
+        })
+        .catch(() => {
+          refreshBtn.classList.remove('loading');
+          refreshBtn.innerHTML = '🔄 Refresh Content';
+          grid.innerHTML = `
+        <div class="error-wrap">
+          <div class="error-icon">⚠️</div>
+          <div class="error-title">Refresh Failed</div>
+          <div class="error-sub">Check backend server state.</div>
+        </div>`;
+        });
+    }
+
+    function updateStats(videos) {
+      // Analytics labels bypassed for data ingestion layout
+    }
+
+
+    function startHackerStream() {
+      const logBox = document.getElementById('hackerLog');
+      setInterval(() => {
+        fetch('/live_viral_stream')
+          .then(r => r.json())
+          .then(data => {
+            if (data && data.length) {
+              const randomVid = data[Math.floor(Math.random() * data.length)];
+              const line = document.createElement('div');
+              line.className = 'hacker-line';
+              line.style.cursor = 'pointer';
+              line.title = "Click to trace content";
+              line.onclick = () => {
+                window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(randomVid.title)}`, '_blank');
+              };
+              line.textContent = `> [DETECTED] ${Number(randomVid.views).toLocaleString()} views | ${randomVid.title}`;
+              logBox.appendChild(line);
+              logBox.scrollTop = logBox.scrollHeight;
+
+              if (logBox.children.length > 25) {
+                logBox.removeChild(logBox.firstChild);
+              }
+            }
+          }).catch(() => { });
+      }, 150);
+
+
+    }
+    startHackerStream();
+
+
+
+
+    fetch('/trending')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('loader').remove();
+        allVideos = data;
+        updateStats(data);
+        renderCards(data);
+      })
+      .catch(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+          loader.innerHTML = `
+        <div class="error-wrap">
+          <div class="error-icon">⚠️</div>
+          <div class="error-title">Backend Unreachable</div>
+          <div class="error-sub">Ensure the Flask server is running on port 5001.</div>
+        </div>`;
+        }
+      });
+
+
+    // Automatically refresh feed intelligence every 10 minutes
+    setInterval(() => {
+      fetchNewContent();
+    }, 600000);
+
+    function updateClock() {
+      const now = new Date();
+      const hrs = String(now.getHours()).padStart(2, '0');
+      const mins = String(now.getMinutes()).padStart(2, '0');
+      const secs = String(now.getSeconds()).padStart(2, '0');
+      const clockEl = document.getElementById('realTimeClock');
+      if (clockEl) clockEl.textContent = `${hrs}:${mins}:${secs}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The video of the minister's interaction is going viral.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The controversy erupted after a video showed her commenting on a student's English-speaking ability during a school visit, drawing criticism ... ... video of her interacting with students during a school inspection went viral ... Minister S Keerthana Faces Backlash Over School Inspection ... The controversy erupted after a video showed her commenting on a student's English-speaking ability during a school visit, drawing criticism ...",
+      "url": "https://www.instagram.com/p/DafLbhTiKwq/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/p/DafLbhTiKwq/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.49565550684928894,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7028277534246445,
+  "claim": "The video of the minister's interaction is going viral."
+}

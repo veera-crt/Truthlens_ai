@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister from the TVK stated she was trying to highlight the poor English standard of students in government schools.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "If public representatives regularly interact with school children, they should improve not only their English but also their approach. Industries Minister Keerthana has come under the scanner yet again after her video from a school inspection has surfaced. Rajmohan stated that the new Tamilaga Vettri Kazhagam (TVK) government will keep the policy of teaching only Tamil and English in schools. Read ...",
+      "url": "https://www.facebook.com/dtnext/posts/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1441984314630970/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/dtnext/posts/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1441984314630970/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5780665278434753,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7440332639217377,
+  "claim": "The minister from the TVK stated she was trying to highlight the poor English standard of students in government schools."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Farmers urged the Chief Minister to condemn the arrogant speeches made by ministers.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The SKM has demanded the immediate resignation of Commerce Minister Piyush Goyal, accusing him of betraying farmers after previously promising ... A senior Congress leader and minister in the Karnataka government, Shivanand Patil sparked an outrage when he claimed farmers wished for drought. Farmers' outrage over CM Vijay's announcement...!!! | Pudukottai | CM Vijay \u00b7 Comments.",
+      "url": "https://www.facebook.com/KisanSabha.org/posts/samyukt-kisan-morcha-skm-press-release-for-the-online-press-conference-at-330-pm/1325507742938495/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/KisanSabha.org/posts/samyukt-kisan-morcha-skm-press-release-for-the-online-press-conference-at-330-pm/1325507742938495/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4028809666633606,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6564404833316804,
+  "claim": "Farmers urged the Chief Minister to condemn the arrogant speeches made by ministers."
+}

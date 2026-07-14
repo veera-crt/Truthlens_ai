@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Justice Ajay Rastogi is part of the three-member committee for the Karur case.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Former Supreme Court Judge Justice Ajay Rastogi, who heads the Supreme Court appoint committee monitoring the CBI probe into the Karur stampede, ... The probe will be monitored by a three member supervisory committee headed by retired Supreme Court Judge Ajay Rastogi with two IPS officers ... The Supreme Court has named former judge Ajay Rastogi to lead an oversight committee for the CBI investigation into the Karur stampede at a ...",
+      "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/justice-ajay-rastogi-panel-visits-ground-zero-at-velusamypuram-in-karur/article70354091.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/justice-ajay-rastogi-panel-visits-ground-zero-at-velusamypuram-in-karur/article70354091.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7306654453277588,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8203327226638795,
+  "claim": "Justice Ajay Rastogi is part of the three-member committee for the Karur case."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Brazilian player Neymar announced his retirement following Brazil's defeat in the World Cup football series.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Neymar Says Goodbye To International Football After World Cup Elimination | Brazil ... retirement from international football at age 34 ... Football News: Neymar announces his retirement from international football after Brazil's shocking 2-1 loss to Norway in the Round of 16 at ... Neymar has retired from Brazil. Yes, he couldn't win the World Cup, yes, he couldn't win the Ballon d'Or, couldn't surpass Messi and ...",
+      "url": "https://www.youtube.com/watch?v=Xy0wm6T3JHU",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=Xy0wm6T3JHU",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.710990846157074,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8104954230785371,
+  "claim": "Brazilian player Neymar announced his retirement following Brazil's defeat in the World Cup football series."
+}

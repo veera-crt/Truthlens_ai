@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Brazil is a five-time champion in the World Cup football series.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Brazil is the most successful national team in the history of the World Cup, having won five titles and earned second place, third place, and fourth place ... In claiming their fifth world title, in 2002, Brazil won seven matches out of seven, a victorious campaign that has never been matched and that ... Brazil's World Cup Wins: 1958 \u2013 Sweden 1962 \u2013 Chile 1970 \u2013 Mexico 1994 \u2013 USA 2002 \u2013 South Korea/Japan Brazil is followed by ...",
+      "url": "https://en.wikipedia.org/wiki/Brazil_at_the_FIFA_World_Cup",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://en.wikipedia.org/wiki/Brazil_at_the_FIFA_World_Cup",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7094137668609619,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.809706883430481,
+  "claim": "Brazil is a five-time champion in the World Cup football series."
+}

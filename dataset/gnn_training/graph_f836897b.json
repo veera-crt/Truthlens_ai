@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Farmers state that Minister Adhavarjuna's speeches demeaning agriculture cannot be accepted.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "A young farmer becomes Chief Minister, Movie Flim Inspiration. My story. What is your reply, can you watch the movie. (A revolution). 38w ... Agriculture has always been very close to the Her Excellency the President of India. Over the last few years she has taken keen initiative in the Agriculture ... Minister Merugu Nagarjuna Speech at Thullur Public Meeting | CM Jagan | Amaravati @SakshiTVLIVE #MeruguNagarjuna #ThullurPublicMeeting ...",
+      "url": "https://www.facebook.com/IamNagarjuna/posts/video-king-nagarjunas-felicitation-his-speech-at-alai-balai-2025-teamnag/1357196355774732/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/IamNagarjuna/posts/video-king-nagarjunas-felicitation-his-speech-at-alai-balai-2025-teamnag/1357196355774732/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4574100971221924,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6837050485610963,
+  "claim": "Farmers state that Minister Adhavarjuna's speeches demeaning agriculture cannot be accepted."
+}

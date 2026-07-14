@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A video showing a student and a teacher interacting with ministers is circulating.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Browse 20,340 teacher student interaction videos and clips available to use in your projects, or start a new search to explore more footage and b-roll video ... This video captures a dramatic classroom scene centered around a teacher and a student. The narrative unfolds in a modern computer lab and a sunlit classroom, ... The Prime Minister, Shri Narendra Modi at the \"Teachers' Day\" function, at Manekshaw Auditorium, in New Delhi on September 05, 2014.",
+      "url": "https://www.gettyimages.in/videos/teacher-student-interaction",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.gettyimages.in/videos/teacher-student-interaction",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6359844207763672,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7729922103881837,
+  "claim": "A video showing a student and a teacher interacting with ministers is circulating."
+}

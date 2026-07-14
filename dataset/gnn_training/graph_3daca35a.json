@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The committee's inquiry aims to ensure a fair, transparent, and independent investigation into the Karur matter.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Court held that the Karur incident, which has shaken the national conscience, deserves fair and impartial CBI investigation. The TVK has sought an independent investigation under the supervision of the Supreme Court, contending that a fair and impartial probe would ... The apex court emphasized the fundamental rights of citizens to a fair and independent probe, highlighting the gravity of this national tr\u2c65g\u0247dy ...",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.scobserver.in/journal/supreme-court-orders-cbi-probe-into-karur-stampede-constitutes-retired-judge-led-oversight-panel/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6845889091491699,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.797294454574585,
+  "claim": "The committee's inquiry aims to ensure a fair, transparent, and independent investigation into the Karur matter."
+}

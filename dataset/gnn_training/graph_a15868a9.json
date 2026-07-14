@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The Vedharanyam farmer who committed suicide had participated in a protest in Chennai.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Farmers in Vedaranyam, Nagapattinam district of Tamil Nadu staged a unique protest by singing traditional oppari (lamentation) songs to press ... A row over the suicide of a farmer at a rally against a controversial land reform bill snowballed into a major controversy. A 60-year-old Chennai man died of suicide while allegedly supporting the farmers' protest going on at the borders of Delhi on Saturday.",
+      "url": "https://www.facebook.com/PressTrustofIndia/posts/farmers-in-vedaranyam-nagapattinam-district-of-tamil-nadu-staged-a-unique-protes/1275611304770496/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/PressTrustofIndia/posts/farmers-in-vedaranyam-nagapattinam-district-of-tamil-nadu-staged-a-unique-protes/1275611304770496/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.697874128818512,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.803937064409256,
+  "claim": "The Vedharanyam farmer who committed suicide had participated in a protest in Chennai."
+}

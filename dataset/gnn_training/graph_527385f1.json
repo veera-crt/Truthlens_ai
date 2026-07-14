@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Narayan Tirupati of the BJP questioned why children should be exposed in the manner shown in the video.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Keerthana's Inspection at a Government School, BJP Tamil Nadu Chief Spokesperson Narayanan Thirupathy says, \"There is nothing wrong in going for an inspection ... 6 Stories At 6: 'DMK Trying To Cover Up Problems', BJP's Narayan Tirupati On Language War #BreakingNews #RepublicTV #RepublicTVLive Republic\u00a0... BJP's Narayanan Thirupathy responds to the allegations of Binoy Viswam. Watch the interesting debate between the two in #NEWSROOM.",
+      "url": "https://x.com/narayanantbjp?lang=en",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://x.com/narayanantbjp?lang=en",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4370066523551941,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6735033261775971,
+  "claim": "Narayan Tirupati of the BJP questioned why children should be exposed in the manner shown in the video."
+}

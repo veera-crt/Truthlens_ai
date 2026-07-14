@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Djokovic achieved a record of 106 wins in the Wimbledon tennis tournament, surpassing Roger Federer's record for most wins.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The most Men's Singles Wins at Wimbledon: NOVAK DJOKOVIC: 106 Roger Federer: 105 Novak making more history ... Federer has 105 wins with 8 ... No man has won more matches at Wimbledon, ever. Novak Djokovic overtakes Roger Federer's record to secure a historic 106th gentlemen's singles ... Historic milestone: Djokovic beat Safiullin 7-6, 6-3, 3-6, 6-3 to surpass Federer's 105 Wimbledon wins, setting a new men's singles record ...",
+      "url": "https://www.facebook.com/TennisTV/posts/the-most-mens-singles-wins-at-wimbledonnovak-djokovic-106-roger-federer-105novak/1583477869799953/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/TennisTV/posts/the-most-mens-singles-wins-at-wimbledonnovak-djokovic-106-roger-federer-105novak/1583477869799953/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.8064359426498413,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8582179713249207,
+  "claim": "Djokovic achieved a record of 106 wins in the Wimbledon tennis tournament, surpassing Roger Federer's record for most wins."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "58 engineering colleges were closed nationwide for various reasons.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Over 55 engineering colleges nationwide ceased operations in the 2025-26 academic year, with existing students permitted to finish their degrees ... The AICTE has ordered closure of 58 engineering colleges across the country during the 2025-26 academic year. This progressive closure of 58 engineering and technical colleges across many states will take place during the 2025-26 academic year. It is ...",
+      "url": "https://m.economictimes.com/industry/services/education/58-engineering-technical-colleges-closed-across-india-in-2025-26-aicte/articleshow/132192356.cms",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://m.economictimes.com/industry/services/education/58-engineering-technical-colleges-closed-across-india-in-2025-26-aicte/articleshow/132192356.cms",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6685945987701416,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7892972993850709,
+  "claim": "58 engineering colleges were closed nationwide for various reasons."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Many people are questioning why every action by the minister should be a reel.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Holding the government to account is the role of the opposition, and it starts with asking the right questions. The public deserves honesty, ... The Indian government has reportedly blocked a viral Instagram reel that satirized Prime Minister Narendra Modi, triggering fresh concerns ... Since January, we have only sat for 29 days, and that's because Doug Ford doesn't like answering questions from the opposition or from the media ...",
+      "url": "https://www.instagram.com/reel/DVaWQpngqo8/?hl=en",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/reel/DVaWQpngqo8/?hl=en",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contradicts",
+      "weight": 0.35119879245758057,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.4305993962287903,
+  "claim": "Many people are questioning why every action by the minister should be a reel."
+}

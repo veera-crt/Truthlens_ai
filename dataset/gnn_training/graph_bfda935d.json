@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister stated the video was not shot by her for 'reels' but was shot by media.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "It is clear that the reel was shot without affecting office operations,\u201d the Minister stated. \u201cThe officials concerned have been instructed not ... ... Minister Yogi Adityanath has cautioned police personnel against making social media reels while on duty, stating that such activities amount ... Authorities took down a video that mocked Prime Minister Narendra Modi's undignified behavior while meeting foreign leaders.",
+      "url": "https://www.thehindu.com/news/national/kerala/minister-intervenes-to-spare-thiruvalla-municipality-staff-over-viral-reel-video/article68363788.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/national/kerala/minister-intervenes-to-spare-thiruvalla-municipality-staff-over-viral-reel-video/article68363788.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.657143771648407,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7835718858242036,
+  "claim": "The minister stated the video was not shot by her for 'reels' but was shot by media."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister cited poor learning standards in government schools.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "limits the government's ability to ensure minimum standards and equity in educational provisioning. 4.2 Academic Challenges. 4.2.1 Misalignment in Pedagogy ... The statement highlights a deeper issue \u2014 despite significant investment, basic reading skills among students remain weak. the remark has ... The declining standards of learning levels in India's schools are well established by now. Studies other than ASER have also reported the ...",
+      "url": "https://niti.gov.in/sites/default/files/2026-05/School-Education-System-in-India.pdf",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://niti.gov.in/sites/default/files/2026-05/School-Education-System-in-India.pdf",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5734564065933228,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7717282032966613,
+  "claim": "The minister cited poor learning standards in government schools."
+}

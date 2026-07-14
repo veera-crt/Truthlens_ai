@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A stampede occurred at a 'Thavaikka' event in Madurai.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "TVK \u0c2a\u0c3e\u0c30\u0c4d\u0c1f\u0c40 \u0c2e\u0c39\u0c3e\u0c38\u0c2d\u0c32\u0c4b \u0c24\u0c4a\u0c15\u0c4d\u0c15\u0c3f\u0c38\u0c32\u0c3e\u0c1f.. 400 \u0c2e\u0c02\u0c26\u0c3f\u0c15\u0c3f \u0c17\u0c3e\u0c2f\u0c3e\u0c32\u0c41.. \u0c12\u0c15\u0c30\u0c41 \u0c38\u0c4d\u0c2a\u0c3e\u0c1f\u0c4d\u0c32\u0c4b\u0c28\u0c47.. | Stampede at Thalapathy Vijay's TVK Party Meeting in Madurai | Actor Vijay's Supporter ... Tragedy at Vijay's Madurai rally: 33-year-old fainted and was brought dead to Madurai hospital | Pramod Madhav #ActorVijay #Madurai ... Two persons - a male and a female - died and eight were injured in a stampede at Lord Kallazhagar entering the #VaigaiRiverFestival in ...",
+      "url": "https://www.youtube.com/watch?v=CTZg1zHgN4A",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=CTZg1zHgN4A",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6708874702453613,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7904437351226807,
+  "claim": "A stampede occurred at a 'Thavaikka' event in Madurai."
+}

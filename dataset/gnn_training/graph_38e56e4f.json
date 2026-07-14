@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Today, judges have made statements in the petition filed by the Dravida Munnetra Kazhagam.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The single judge instead of restricting himself to the petition's scope made unwarranted remarks about actor Vijay and ordered an SIT probe that ... The Supreme Court today agreed to hear Dravida Munnetra Kazhagam's plea (DMK) seeking to bar Tamilaga Vettri Kazhagam (TVK) leaders, its Chief ... Supreme Court rejects DMK's plea to restrain TVK leaders' comments on Karur stampede, emphasizing free speech over judicial intervention.",
+      "url": "https://www.facebook.com/livelaw.in/posts/the-organising-secretary-of-the-dravida-munnetra-kazhagam-dmk-rs-bharathi-has-mo/1470470835117943/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/livelaw.in/posts/the-organising-secretary-of-the-dravida-munnetra-kazhagam-dmk-rs-bharathi-has-mo/1470470835117943/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5312930345535278,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.720646517276764,
+  "claim": "Today, judges have made statements in the petition filed by the Dravida Munnetra Kazhagam."
+}

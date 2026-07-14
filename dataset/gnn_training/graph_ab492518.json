@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A 'Thavaikka' MLA was seen smiling while leaving during the stampede at the Madurai event.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "A political rally in Karur turned into a tragedy, resulting in the deaths of at least 40 people and injuring over 80. The event, organised ... Visuals from the spot where a stampede occurred during a public event of TVK chief and actor Vijay. 189 views \u00b7 8 months ago. The outrage stems from a controversial portrayal of the revered saint-poet Thiruvalluvar in a saffron robe during a recent event at Raj Bhavan.",
+      "url": "https://www.youtube.com/watch?v=_I31S1w4pgM",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=_I31S1w4pgM",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4672982394695282,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6886491197347642,
+  "claim": "A 'Thavaikka' MLA was seen smiling while leaving during the stampede at the Madurai event."
+}

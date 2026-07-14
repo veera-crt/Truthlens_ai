@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Minister Adhav Arjuna's statements have been declared as contempt of court.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The Supreme Court has announced that a plea filed by the DMK seeking a ban on TVK members from commenting on the Karur tragedy will be heard ... DMK approaches Supreme Court over TVK minister Aadhav Arjuna's Karur stampede remarks. DMK states that the speech seeks to create a false n ... Breaking News: Supreme Court orders CBI investigation into Karur case - Complete coverage and legal analysis. Watch Aadhav Arjuna's ...",
+      "url": "https://www.instagram.com/p/DafSLl3jhIJ/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/p/DafSLl3jhIJ/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5308371782302856,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7204185891151429,
+  "claim": "Minister Adhav Arjuna's statements have been declared as contempt of court."
+}

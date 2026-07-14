@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister told a teacher that students are not able to comprehend English sentences.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Government school students can't converse in English. That was basic understanding that children won't be fluent in English still ... A former Education Minister has said many children fail English Language in school because the medium of instruction is in English and not in ... ... teacher to conduct instructions in ... Tamil Nadu Minister Faces Backlash After Publicly Testing Student's English At Government School.",
+      "url": "https://www.facebook.com/dtnext/posts/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1441984314630970/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/dtnext/posts/industries-minister-keerthana-has-come-under-the-scanner-yet-again-after-her-vid/1441984314630970/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.640741765499115,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7753708827495576,
+  "claim": "The minister told a teacher that students are not able to comprehend English sentences."
+}

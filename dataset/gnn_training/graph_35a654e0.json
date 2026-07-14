@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Six people died in an apartment building collapse in Mumbai.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Akhtar Jahan's house was crushed by a collapsing adjacent building in Mumbai \u00b7 The four-storey illegal structure showed cracks and signs of ... At least 19 people have died, and 14 have been injured after a 3-storey building collapsed in the heart of Mumbai. At least 13 people have been killed after a residential building collapsed in Virar East, on the outskirts of Mumbai, late on Tuesday night.",
+      "url": "https://www.ndtv.com/india-news/they-saw-it-coming-family-killed-in-mumbai-building-collapse-had-planned-to-shift-the-next-day-11738279",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.ndtv.com/india-news/they-saw-it-coming-family-killed-in-mumbai-building-collapse-had-planned-to-shift-the-next-day-11738279",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6304982304573059,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.770249115228653,
+  "claim": "Six people died in an apartment building collapse in Mumbai."
+}

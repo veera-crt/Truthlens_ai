@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister interacted with a student, asking questions in English about the student's father's occupation.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Would you ask a father to quit his job? \u2014\u2014\u2014\u2014- It's unfair to demand our Hon'ble Education Minister's resignation before 2033. Can we have one more subject called Playtime? When can we stop wearing masks in school? These are some questions asked by Primary 4 student ... 23 lakh students. Three consecutive years. One Education Minister. When reporters asked him about it he walked away without a word. Modi Ji ...",
+      "url": "https://www.instagram.com/reel/DZsH63aBaez/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/reel/DZsH63aBaez/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contradicts",
+      "weight": 0.3715934455394745,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.44079672276973725,
+  "claim": "The minister interacted with a student, asking questions in English about the student's father's occupation."
+}

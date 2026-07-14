@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Opposition leader Udhayanidhi Stalin accuses the ruling party of breaking the ADMK through 'horse-trading'.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "(TVK) of indulging in MLA poaching and horse-trading. Stalin alleged ... Rangaraj Pandey Latest Interview | \"Vijay is here to Stay\" | DMK | Stalin ... DMK's M.K. Stalin criticizes AIADMK MLAs' resignations and swift switch to TVK as political horse trading, exposing hypocrisy. Udhayanidhi Stalin slams alleged horse-trading during Tamil Nadu trust vote as main Dravida Munnetra Kazhagam stages a walkout, accusing ruling ...",
+      "url": "https://www.youtube.com/watch?v=XN0maYH-_so",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=XN0maYH-_so",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6107441186904907,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7603720593452454,
+  "claim": "Opposition leader Udhayanidhi Stalin accuses the ruling party of breaking the ADMK through 'horse-trading'."
+}

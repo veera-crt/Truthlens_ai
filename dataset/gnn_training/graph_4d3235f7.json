@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "A clash occurred among fishermen in Chinnammuttam, Kanyakumari district.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "A clash occurred between fishermen in Chinnammuttam, Kanyakumari, after some boats left early, leading to a protest and confrontation. Police intervened to prevent further violence. The incident highlighted regulatory issues in fishing operations.",
+      "url": "https://www.thehindu.com/news/cities/Madurai/clash-erupts-at-chinna-muttom-fishing-harbour-after-boats-venture-out-before-scheduled-time/article71190253.ece",
+      "id": "EV_tavily"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/cities/Madurai/clash-erupts-at-chinna-muttom-fishing-harbour-after-boats-venture-out-before-scheduled-time/article71190253.ece",
+      "id": "SRC_tavily"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.8914700746536255,
+      "source": "CLAIM",
+      "target": "EV_tavily"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_tavily",
+      "target": "SRC_tavily"
+    }
+  ],
+  "baseline_trust_score": 0.9307350373268126,
+  "claim": "A clash occurred among fishermen in Chinnammuttam, Kanyakumari district."
+}

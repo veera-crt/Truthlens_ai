@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "ADMK Deputy General Secretary K.P. Munusamy condemned 'Vijay' (referring to the ruling party/leader) for making significant mistakes during the first 50 days in power.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Munusamy alleged that Mr. Vijay was an illusion created and amplified by Instagram, swaying the youth into believing that this is how a Chief ... LIVE | \u0bb5\u0bbf\u0b9c\u0baf\u0bc8 \u0bae\u0bb1\u0bc8\u0bae\u0bc1\u0b95\u0bae\u0bbe\u0b95 \u0bb5\u0bbf\u0bae\u0bb0\u0bcd\u0b9a\u0bbf\u0ba4\u0bcd\u0ba4 \u0b95\u0bc7.\u0baa\u0bbf.\u0bae\u0bc1\u0ba9\u0bc1\u0b9a\u0bbe\u0bae\u0bbf | K P Munusamy | TVK Vijay | ADMK \u00b7 Comments. ... Vijay has made major blunders within 50 days of taking power. Munusamy warned that such actions leave a big question mark over whether the ...",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/cm-vijay-betraying-the-hopes-of-youth-kp-munusamy/article71057377.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/cm-vijay-betraying-the-hopes-of-youth-kp-munusamy/article71057377.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.669636607170105,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7898183035850526,
+  "claim": "ADMK Deputy General Secretary K.P. Munusamy condemned 'Vijay' (referring to the ruling party/leader) for making significant mistakes during the first 50 days in power."
+}

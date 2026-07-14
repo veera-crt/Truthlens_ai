@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Norway defeated Brazil by a score of two to one in the World Cup football series, advancing to the quarterfinals.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Erling Haaland scored two late goals to send Norway through to their first World Cup quarterfinal with a stunning 2-1 win over Brazil, ... Watch the full match highlights as Norway stunned five-time champions Brazil 2-1 in the FIFA World Cup 2026 Round of 16. Norway stunned Brazil with a 2-1 win as Erling Haaland scored a brace to send his side to the World Cup quarterfinals for the first time in ...",
+      "url": "https://www.aljazeera.com/sports/2026/7/5/haaland-scores-twice-as-norway-stun-brazil-2-1-in-world-cup-2026-last-16",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.aljazeera.com/sports/2026/7/5/haaland-scores-twice-as-norway-stun-brazil-2-1-in-world-cup-2026-last-16",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6445727348327637,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7772863674163819,
+  "claim": "Norway defeated Brazil by a score of two to one in the World Cup football series, advancing to the quarterfinals."
+}

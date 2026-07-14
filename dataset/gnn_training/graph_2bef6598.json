@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The Supreme Court transferred the Karur case to the CBI.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Supreme Court Transfers Karur Stampede Case to CBI: Shocking Revelations & Tamil Nadu Politics Exposed | Ayyanathan Latest Interview Dive ... The Supreme Court, on Monday, ordered the Central Bureau of Investigation (CBI) to take over the probe into the recent Karur stampede. It has granted the petitioners' demands for a CBI investigation and judicial supervision as \u201cinterim relief\u201d, yet the measures are irreversible.",
+      "url": "https://www.facebook.com/livelaw.in/posts/in-the-karur-stampede-case-the-supreme-court-today-refused-to-modify-its-earlier/1298686138963081/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/livelaw.in/posts/in-the-karur-stampede-case-the-supreme-court-today-refused-to-modify-its-earlier/1298686138963081/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7807608842849731,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8453804421424866,
+  "claim": "The Supreme Court transferred the Karur case to the CBI."
+}

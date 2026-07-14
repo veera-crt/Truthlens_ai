@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "DMK leader Udhayanidhi Stalin stated that the focus should be on building confidence among children rather than discouraging them.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The DMK accused Keerthana of humiliating the student for political gain, with Opposition leader Udhayanidhi Stalin calling the interaction ... BreakingNews | A political controversy has erupted in Tamil Nadu after state minister Keerthana faces backlash over her visit to a ... \u201cOur responsibility is to instil confidence in children, not shatter their self-confidence.\u201d Leader of the Opposition #UdhayanidhiStalin and ...",
+      "url": "https://www.facebook.com/News9live/videos/a-political-row-has-erupted-in-tamil-nadu-over-a-viral-video-showing-tvk-leader-/27608109505496786/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/News9live/videos/a-political-row-has-erupted-in-tamil-nadu-over-a-viral-video-showing-tvk-leader-/27608109505496786/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5443975925445557,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7271987962722779,
+  "claim": "DMK leader Udhayanidhi Stalin stated that the focus should be on building confidence among children rather than discouraging them."
+}

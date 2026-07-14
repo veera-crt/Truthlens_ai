@@ -1,0 +1,390 @@
+================================================================================
+                    TRUTHLENS AI - COMPLETE SYSTEM SETUP GUIDE
+              (Step-by-Step Tutorial Guide for YouTube Subscribers)
+================================================================================
+
+Welcome! This is a complete guide to help you set up and run the TruthLens AI 
+project on your laptop. We have written this guide in simple, step-by-step English 
+so that anyone can follow it easily. 
+
+Please perform each step in the exact order shown below.
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS:
+1) INTRO ABOUT THIS PROJECT & SUMMARY (What is this project?)
+2) INITIAL SETUP (Install Python, check the version, and set up your Virtual Env)
+3) REQUIREMENTS & ENVIRONMENT CONFIGURATION (Install packages, set up .env & Google Sheets)
+4) SYSTEM VERIFICATION & LOCAL MODELS (Download and save AI models to your laptop)
+5) DETAILED CODE MODULES & PROJECT FLOW (Which file does what work?)
+6) CHROME / BRAVE EXTENSION SETUP (How to install the browser extension)
+7) FINAL CHECK BEFORE RUNNING (Make sure you did everything right)
+8) START THE FILE SERVER (Run the Python Flask API backend)
+9) START THE AUTOPILOT MODE (Run the background autopilot automation)
+--------------------------------------------------------------------------------
+
+
+================================================================================
+1) INTRO ABOUT THIS PROJECT & SUMMARY
+================================================================================
+
+--- WHAT IS TRUTHLENS AI? ---
+TruthLens AI is a smart tool that checks if a YouTube video is telling the truth 
+or if it is fake news, clickbait, or highly exaggerated. It scans the video data, 
+checks search engines to verify facts, analyzes the language and emotions used in 
+the video, and calculates a final "Trust Index" score from 0% (fake/manipulated) 
+to 100% (safe/authentic).
+
+--- THE 4 MAIN PARTS ---
+1. Browser Extension: The visual popup window where you click "Analyze Video".
+2. Flask Backend Server: The core Python script that runs in the background.
+3. Google Sheets Database: A Google Sheet that saves the results of analyzed videos.
+4. Autopilot Daemon: An optional script that checks trending videos automatically.
+
+
+================================================================================
+2) INITIAL SETUP
+================================================================================
+
+Follow these exact steps to set up Python and FFmpeg on your computer.
+
+--- STEP A: INSTALL PYTHON & FFMPEG ---
+
+* FOR MAC USERS:
+  1. Open your Terminal application (press Cmd + Space, type "Terminal", and hit Enter).
+  2. Install Homebrew (a package manager) by copy-pasting this command and pressing Enter:
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     (Note: It might ask for your Mac user password. Type it and press Enter.)
+  3. Install Python 3.12 and FFmpeg by running this command:
+     brew install python@3.12 ffmpeg
+
+* FOR WINDOWS USERS:
+  1. Install Python 3.12:
+     - Open your web browser and go to: https://www.python.org/downloads/
+     - Download the Python 3.12 installer for Windows.
+     - Open the downloaded setup file.
+     - *VERY IMPORTANT*: Before you click "Install Now", look at the bottom of the window 
+       and check the box that says "Add Python to PATH". This is required!
+     - Click "Install Now" and wait for it to finish.
+  2. Install FFmpeg:
+     - Click the Windows Start menu, type "PowerShell", right-click it, and choose "Run as Administrator".
+     - Copy-paste and run this command:
+       choco install ffmpeg
+       *If you do not have Chocolatey installed, follow these manual steps to install FFmpeg*:
+       - Open your web browser and go to: https://www.gyan.dev/ffmpeg/builds/
+       - Scroll down to the "release builds" section and download the git-essentials zip file (e.g., `ffmpeg-release-essentials.zip`).
+       - Create a new folder directly in your C: drive called `C:\ffmpeg`.
+       - Open the downloaded zip file, extract its contents, and copy-paste them inside `C:\ffmpeg`. Make sure you see a folder named `bin` inside `C:\ffmpeg` (so the path to it is `C:\ffmpeg\bin`).
+       - To add FFmpeg to your system Environment PATH (so Windows knows where to find it):
+         a. Click the Windows Start menu icon on your taskbar.
+         b. Type the word "environment" in the search box.
+         c. Click on the option that says: "Edit the system environment variables".
+         d. A small "System Properties" window will open. Click the "Environment Variables..." button at the bottom.
+         e. Under the "System variables" section (the bottom list), find the variable named "Path" and double-click it.
+         f. A new list window will open. Click the "New" button on the right side.
+         g. Type or paste: `C:\ffmpeg\bin`
+         h. Click "OK" on that window, click "OK" on the Environment Variables window, and click "OK" on the System Properties window to save your changes.
+         i. Close and reopen any open PowerShell or CMD command prompts so Windows loads your new changes.
+
+--- STEP B: VERIFY VERSION ---
+Make sure Python is installed correctly by checking its version:
+* On Mac: Open Terminal, type `python3 --version` and press Enter.
+* On Windows: Open Command Prompt or PowerShell, type `python --version` and press Enter.
+* Success: You should see text like `Python 3.12.x`. If you see this, you are ready!
+
+--- STEP C: CREATE A VIRTUAL ENVIRONMENT (venv) ---
+A virtual environment keeps your project folders neat and clean. Open your terminal, 
+navigate to the folder where you downloaded this project, and run:
+
+* FOR MAC USERS:
+  1. Create the environment:
+     python3 -m venv venv
+  2. Activate it:
+     source venv/bin/activate
+  3. Verify: You should now see `(venv)` written at the very beginning of your terminal line.
+
+* FOR WINDOWS POWERSHELL USERS:
+  1. Create the environment:
+     python -m venv venv
+  2. Allow scripts to run (run this command so PowerShell lets you activate the environment):
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+  3. Activate it:
+     .\venv\Scripts\Activate.ps1
+  4. Verify: You should see `(venv)` at the beginning of your command line.
+
+* FOR WINDOWS COMMAND PROMPT (CMD) USERS:
+  1. Create the environment:
+     python -m venv venv
+  2. Activate it:
+     .\venv\Scripts\activate.bat
+  3. Verify: You should see `(venv)` at the beginning of your prompt.
+
+
+================================================================================
+3) REQUIREMENTS & ENVIRONMENT CONFIGURATION (.env & Google Sheets Walkthrough)
+================================================================================
+
+Now, install the Python libraries and set up your environment keys.
+
+--- STEP A: INSTALL REQUIRED LIBRARIES ---
+Make sure your virtual environment is active (it must show `(venv)` on the left of your line). 
+Then, copy and run these commands to install all the tools:
+
+* FOR macOS TERMINAL:
+  - Option A (Recommended): Using pip3
+    pip3 install --upgrade pip
+    pip3 install -r requirements.txt
+  - Option B: Using standard pip
+    pip install --upgrade pip
+    pip install -r requirements.txt
+
+* FOR WINDOWS POWERSHELL / CMD:
+  - Option A (Recommended): Using standard pip
+    pip install --upgrade pip
+    # (OPTIONAL: For Windows users with NVIDIA Graphics Cards to speed up transcription):
+    # pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+    pip install -r requirements.txt
+    
+  - Option B: Using Python module call (if the pip command is not recognized):
+    python -m pip install --upgrade pip
+    # (OPTIONAL: For Windows users with NVIDIA Graphics Cards to speed up transcription):
+    # python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+    python -m pip install -r requirements.txt
+
+--- STEP B: CREATE A `.env` CONFIGURATION FILE ---
+1. Open the project folder on your computer.
+2. Create a new text file and name it exactly: `.env`
+   (Make sure there is a dot `.` at the beginning and no `.txt` at the end).
+3. Copy the template lines below and paste them inside your new `.env` file:
+
+------------------------------ COPY BELOW THIS LINE ----------------------------
+# Flask configuration
+FLASK_APP=Server/app.py
+FLASK_ENV=development
+FLASK_DEBUG=1
+
+# YouTube Data API Key
+YOUTUBE_API_KEY=YOUR_YOUTUBE_API_KEY_HERE
+
+# Google Sheets Database Configuration
+G_SHEET=YOUR_GOOGLE_SHEETS_URL_HERE
+GOOGLE_SERVICE_ACCOUNT_JSON='PASTE_YOUR_FULL_JSON_CONTENT_HERE_INSIDE_SINGLE_QUOTES'
+
+# LLM API Keys
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+GROQ_API_KEY=YOUR_GROQ_API_KEY_HERE
+
+# Fact-Checking Search APIs
+TAVILY_API_KEY=YOUR_TAVILY_API_KEY_HERE
+EXA_API_KEY=YOUR_EXA_API_KEY_HERE
+SERPER_API_KEY=YOUR_SERPER_API_KEY_HERE
+
+------------------------------ COPY ABOVE THIS LINE ----------------------------
+--- STEP C: HOW TO GENERATE ALL API KEYS ---
+* YOUTUBE_API_KEY: Go to Google Cloud Console, click "Create Project", search for "YouTube Data API v3", click "Enable", go to the Credentials tab, click "+ Create Credentials", select "API key", and copy it.
+* GEMINI_API_KEY: Go to Google AI Studio (https://aistudio.google.com/), click the "Get API Key" button, click "Create API Key", and copy the code.
+* GROQ_API_KEY: Go to Groq Console (https://console.groq.com/), log in, go to API Keys under the menu, click "Create API Key", and copy the code.
+* TAVILY_API_KEY: Sign up at https://tavily.com/ for a free search API key and copy it from your dashboard.
+* EXA_API_KEY: Sign up at https://exa.ai/ to get an API key for search results.
+* SERPER_API_KEY: Sign up at https://serper.dev/ to get a Google Search API key.
+
+
+--- STEP D: MANDATORY GOOGLE SHEETS DATABASE SETUP ---
+1. Go to Google Cloud Console (https://console.cloud.google.com/).
+2. In the search bar at the top, search for "Google Sheets API" and click "Enable".
+3. In the search bar, search for "Google Drive API" and click "Enable".
+4. Click the top-left menu, choose "IAM & Admin", then click "Service Accounts".
+5. Click "+ Create Service Account". Fill in a name (like `truthlens-sheets-db`) and click "Create and Continue", then click "Done".
+6. Click on the email address of the service account you just created.
+7. Click the Keys tab at the top. Click "Add Key", choose "Create new key", select "JSON", and click "Create". A JSON key file will download to your computer.
+8. Open the downloaded JSON key file in Notepad (or TextEdit on Mac). Copy everything inside the file.
+9. Open your `.env` file and paste the copied JSON block into the `GOOGLE_SERVICE_ACCOUNT_JSON` variable.
+   *VERY IMPORTANT RULE*: Make sure the text is wrapped inside single quotes like this:
+   GOOGLE_SERVICE_ACCOUNT_JSON='{"type": "service_account", ...}'
+10. Go to Google Sheets (https://docs.google.com/spreadsheets), create a new blank spreadsheet, and copy its URL from the address bar.
+11. Paste this URL into the `G_SHEET` variable in your `.env` file.
+12. Look at the email address of the service account you created (ends with `.gserviceaccount.com`). Share your Google Spreadsheet with this email as an "Editor" (so the script can write data to it).
+13. Run the database setup script to format the sheet:
+    * macOS: python3 Server/init_gsheet_db.py
+    * Windows: python Server/init_gsheet_db.py
+    (Success message: `🎉 Google Sheet Database Initialization Complete!`)
+
+
+================================================================================
+4) SYSTEM VERIFICATION & LOCAL MODELS
+================================================================================
+
+This project runs deep learning AI models on your laptop. You must install Ollama, 
+download the models, and perform verification steps before launching the project.
+
+--- STEP A: OLLAMA INSTALLATION & MODEL DOWNLOAD ---
+1. Open your browser and go to: https://ollama.com/
+2. Download and run the installer for your operating system (Mac or Windows).
+3. Open the Ollama application. Make sure the Ollama icon is running in your system tray (Windows) or menu bar (Mac).
+4. Open your command Terminal or PowerShell, copy and run these commands to download the models:
+   ollama pull llama3.2-vision
+   ollama pull deepseek-r1:7b
+
+--- STEP B: DOWNLOAD OTHER 5 LOCAL HUGGINGFACE & WHISPER MODELS ---
+Here are the other 5 local models we need to download:
+1. `all-MiniLM-L6-v2` [~90MB] - Embeddings check.
+2. `google/flan-t5-small` [~308MB] - Claim structuring.
+3. `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli` [~370MB] - Manipulation detector.
+4. `SamLowe/roberta-base-go_emotions` [~500MB] - Emotion classifier.
+5. Whisper `base` [~140MB] - Local audio speech-to-text.
+
+Choose one of the options below to download and save these models to your laptop:
+
+* OPTION A: Automatic Download (Helper Script)
+  With your virtual environment active, run this command:
+  - macOS Terminal: python3 modules/Helpers/download_models.py
+  - Windows PowerShell: python modules/Helpers/download_models.py
+  (Wait for it to download all files. It will display a checkmark when successful.)
+
+* OPTION B: Manual Download (If the script fails, run these commands one-by-one)
+  * On Mac Terminal:
+    python3 -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+    python3 -c "from transformers import pipeline; pipeline('text2text-generation', model='google/flan-t5-small')"
+    python3 -c "from transformers import pipeline; pipeline('zero-shot-classification', model='MoritzLaurer/mDeBERTa-v3-base-mnli-xnli')"
+    python3 -c "from transformers import pipeline; pipeline('text-classification', model='SamLowe/roberta-base-go_emotions')"
+    python3 -c "from faster_whisper import WhisperModel; WhisperModel('base', device='cpu', compute_type='float32')"
+  
+  * On Windows PowerShell / CMD:
+    python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+    python -c "from transformers import pipeline; pipeline('text2text-generation', model='google/flan-t5-small')"
+    python -c "from transformers import pipeline; pipeline('zero-shot-classification', model='MoritzLaurer/mDeBERTa-v3-base-mnli-xnli')"
+    python -c "from transformers import pipeline; pipeline('text-classification', model='SamLowe/roberta-base-go_emotions')"
+    python -c "from faster_whisper import WhisperModel; WhisperModel('base', device='cpu', compute_type='float32')"
+
+--- STEP C: VERIFICATION OF THE MODELS ---
+Make sure all models are installed correctly on your computer:
+1. To verify Ollama models:
+   Open your Terminal / PowerShell, type this command and press Enter:
+   ollama list
+   (Verify that both `llama3.2-vision` and `deepseek-r1` are listed in the output table.)
+2. To verify HuggingFace models:
+   Verify that files have been successfully created inside the cache folders:
+   - On macOS: Open Finder, press Cmd + Shift + G, search for `~/.cache/huggingface/hub/` and check for folders like `models--MoritzLaurer...`, `models--SamLowe...`, etc.
+   - On Windows: Navigate to `C:\Users\<Your_Username>\.cache\huggingface\hub\` using File Explorer and verify the folders are present.
+
+
+================================================================================
+5) DETAILED CODE MODULES & PROJECT FLOW
+================================================================================
+
+This section explains how files are laid out in the project directory and which 
+code file handles which task.
+
+--- DIRECTORY LAYOUT & CODE RESPONSIBILITIES ---
+* `extension/` - Chrome/Brave Extension UI
+  - `popup.html`: The HTML file for the extension popup UI.
+  - `popup.js`: The JavaScript file that reads the active tab URL and sends it to the Flask server.
+  - `popup.css`: The CSS styling file containing styling rules and animations.
+
+* `Server/` - Flask API backend entry point
+  - `app.py`: The entry file. Sets up Flask API endpoints, handles requests, and runs background scheduled tasks.
+  - `init_gsheet_db.py`: Clears/formats your Google Sheet worksheets.
+
+* `modules/` - The core execution engines
+  - `phase1_transcription/transcription.py`: Fetches video subtitles using YouTube transcripts or downloads audio streams.
+  - `phase2_social/social_harvest.py`: Crawls metadata of comments and posts on Instagram or Twitter/X.
+  - `phase3_nlp/forensic_nlp.py`: Runs mDeBERTa/GoEmotions zero-shot classifiers on text transcripts to calculate bias and emotion rates.
+  - `phase4_evidence/evidence.py`: Searches Tavily/Exa/Serper for articles matching the claims and scores them.
+  - `phase5_network/graph.py` & `coordination.py`: Uses GNNs (GAT models) to analyze comments and detect coordinated spam networks.
+  - `phase6_fusion/risk_engine.py` & `trust_fusion.py`: Merges results from all phases into a single composite Trust Index (0-100%).
+
+--- REFERRAL AND OWNERSHIP: video-analyzer-main ---
+* Folder: `video-analyzer-main/`
+* Referral Source: https://github.com/byjlw/video-analyzer.git (by GitHub user byjlw)
+* License: Apache License 2.0
+* Responsibility: Handles OpenCV frame extraction and Ollama visual fallbacks. Used when 
+  a video has no subtitles or audio and must be analyzed by looking at video frames.
+
+
+================================================================================
+6) CHROME / BRAVE EXTENSION SETUP
+================================================================================
+
+Follow these exact steps to load the extension in your browser:
+1. Open Google Chrome or Brave.
+2. In the URL address bar at the top, type `chrome://extensions/` and press Enter.
+3. In the top-right corner of the Extensions page, toggle on "Developer mode".
+4. In the top-left corner, click the "Load unpacked" button.
+5. In the file explorer popup window, select the `extension/` folder located inside your cloned project directory.
+6. Click Open/Select. The "TruthLens AI" extension badge should now appear on your page!
+7. Click the Puzzle piece icon on your browser toolbar and pin the TruthLens AI icon.
+
+
+================================================================================
+7) FINAL CHECK BEFORE RUNNING
+================================================================================
+
+Please check these 5 things before starting the servers:
+1. Ensure your `.env` file exists at the root of the project folder.
+2. Verify you shared the Google Sheet with the Service Account email.
+3. Make sure you ran `python3 Server/init_gsheet_db.py` to create the sheets correctly.
+4. Ensure port `5001` is free on your computer (no other development servers running).
+5. Verify you have downloaded the local models by checking Step 4.
+
+
+================================================================================
+8) START THE FILE SERVER
+================================================================================
+
+Start the Flask Python server by running these commands in your command terminal:
+
+* FOR MAC USERS:
+  1. Open terminal in the project directory.
+  2. Activate environment:
+     source venv/bin/activate
+  3. Start the Flask server:
+     python3 Server/app.py
+
+* FOR WINDOWS USERS:
+  1. Open PowerShell or Command Prompt in the project directory.
+  2. Activate environment:
+     .\venv\Scripts\Activate.ps1
+  3. Start the Flask server:
+     python Server/app.py
+
+* Verify Success:
+  The terminal window should show:
+  `* Running on http://127.0.0.1:5001`
+  `✅ GSheetDB Connected. YouTube Headers: 15`
+  
+  Do not close this terminal! Keep it running.
+
+
+================================================================================
+9) START THE AUTOPILOT MODE
+================================================================================
+
+Autopilot mode crawls trending videos in the background and saves them to your 
+Google Sheet database so that you get instant lookup scores.
+
+To start autopilot mode, open a NEW terminal window/tab, navigate to the project directory, 
+activate the environment, and run:
+
+* FOR MAC USERS:
+  1. Open a new Terminal tab/window.
+  2. Activate:
+     source venv/bin/activate
+  3. Run Autopilot:
+     python3 "Autopilot mode/auto.py"
+
+* FOR WINDOWS USERS:
+  1. Open a new PowerShell window.
+  2. Activate:
+     .\venv\Scripts\Activate.ps1
+  3. Run Autopilot:
+     python "Autopilot mode/auto.py"
+
+* Verify Success:
+  The terminal window will display:
+  `=======================================`
+  `   TRUTHLENS AUTOPILOT DAEMON ACTIVATED  `
+  `=======================================`
+  `[*] Starting new Autopilot sequence...`
+
+Congratulations! Your TruthLens AI system is now fully running. Open any YouTube 
+video, click your extension icon, and hit "Analyze Video"!
+================================================================================

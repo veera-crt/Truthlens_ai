@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "MLAs boycotted a minister's event in Kaveri K.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "The DMK-led alliance parties have also joined the boycott, with no ministers, key party functionaries, MLAs, or MPs from the ruling ... Several Congress MLAs spent their night at the Vidhana Soudha or the Legislative Assembly building on February 17, demanding the removal of ... Kuki Groups Call For Social Boycott Of Own MLAs Joining The New Government | ON POINT | News9 \u00b7 Comments.",
+      "url": "https://www.instagram.com/p/DT-sVFvDKJV/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/p/DT-sVFvDKJV/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5899848341941833,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7499924170970917,
+  "claim": "MLAs boycotted a minister's event in Kaveri K."
+}

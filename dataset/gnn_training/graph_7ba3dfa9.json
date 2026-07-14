@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Women and children fainted after being caught in the crowd during the 'Thavaikka' event stampede in Madurai.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Three women and four children fainted in Thirupparankundram temple queue during crowded Vaikasi Visakam celebrations amid high temperatures. 31 people, including women and children, are feared dead after a stampede broke out during Tamilaga Vettri Kazhagam (TVK) chief Vijay's campaign ... 31 people, including women and children, are feared dead after a stampede broke out during Tamilaga Vettri Kazhagam (TVK) chief Vijay's campaign ...",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/three-women-devotees-four-children-faint-in-thiruparankundram-temple-queue-as-vaikasi-visakam-draws-large-crowd/article71040475.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/three-women-devotees-four-children-faint-in-thiruparankundram-temple-queue-as-vaikasi-visakam-draws-large-crowd/article71040475.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7028484344482422,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8064242172241212,
+  "claim": "Women and children fainted after being caught in the crowd during the 'Thavaikka' event stampede in Madurai."
+}

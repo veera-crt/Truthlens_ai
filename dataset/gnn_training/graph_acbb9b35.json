@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The video of the minister's interaction was taken within the last 1 week.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Tamil Nadu Minister S Keerthana has come under criticism after a video of her interacting with students during a school inspection went ... A classroom inspection by TVK IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video ... Keerthana on Tuesday strongly defended herself against criticism over her interaction with a student during a recent inspection at a government ...",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=bfi8W5vpn3A",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4009036719799042,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6554518359899522,
+  "claim": "The video of the minister's interaction was taken within the last 1 week."
+}

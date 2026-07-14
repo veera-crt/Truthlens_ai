@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The TVK government highlighted that a student was unable to respond to even one sentence in English.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Keerthana said the student's inability to reply in English was evidence that the previous government - led by the DMK - had neglected government ... Tamil Nadu Minister Faces Backlash After Publicly Testing Student's English At Government School ... Tamil Nadu School Row: TVK Minister's English ... To help government school students speak English as confidently and fluently as students from English-medium private schools, the government ...",
+      "url": "https://www.moneycontrol.com/news/india/dmk-slams-tvk-leader-over-can-t-answer-in-english-remark-for-a-student-13967856.html",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.moneycontrol.com/news/india/dmk-slams-tvk-leader-over-can-t-answer-in-english-remark-for-a-student-13967856.html",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5356813669204712,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7228406834602357,
+  "claim": "The TVK government highlighted that a student was unable to respond to even one sentence in English."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The BJP alleges that discouraging the student could have been completely avoided.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Kipa Natung Demands Union Education Minister's Resignation Over NEET Paper Leak ITANAGAR, June 24: Itanagar City Congress Committee ... BJP Calls CJP Protests 'Part of Democracy' The BJP has said that the protests led by the newly formed Cockroach Janta Party (CJP) over exam ... 102 likes, 58 comments - freepressjournal on June 22, 2026: \"#neetcontroversy | BJP MP Sudhanshu Trivedi has criticized the Congress Party ...",
+      "url": "https://www.facebook.com/NefaLive2020/posts/kipa-natung-demands-union-education-ministers-resignation-over-neet-paper-leakit/1442319847912264/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/NefaLive2020/posts/kipa-natung-demands-union-education-ministers-resignation-over-neet-paper-leakit/1442319847912264/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contradicts",
+      "weight": 0.3189404606819153,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.41447023034095765,
+  "claim": "The BJP alleges that discouraging the student could have been completely avoided."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Political parties state that the circulating video affects the student's confidence.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Student Vote is a program of CIVIX. Student Vote Canada is presented in collaboration with Elections Canada. ... confidence, and skills needed to participate in democracy and navigate political ... CANDIDATE 1 Chloe Cassens S&I Student Council Party CSFA ... This study presents novel evidence about the differential effects of a multi-platform get-out-the-vote campaign in Denmark, and investigates how such campaigns ...",
+      "url": "https://www.youtube.com/watch?v=dd9c2HHu7WY",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/watch?v=dd9c2HHu7WY",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.45278266072273254,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6813913303613663,
+  "claim": "Political parties state that the circulating video affects the student's confidence."
+}

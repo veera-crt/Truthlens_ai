@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The public is discussing the minister's school incident on social media platforms.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Minister for General Education V. Sivankutty has called for serious deliberations on the rising social media addiction among students. Education minister Jason Clare joined us on Weekend Sunrise to discuss the world first social media ban and anti-bullying reforms. IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video showed her questioning students in ...",
+      "url": "https://www.thehindu.com/news/national/kerala/minister-calls-for-public-discussions-on-rising-social-media-addiction-among-students/article70588339.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/national/kerala/minister-calls-for-public-discussions-on-rising-social-media-addiction-among-students/article70588339.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6338685154914856,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7719342577457429,
+  "claim": "The public is discussing the minister's school incident on social media platforms."
+}

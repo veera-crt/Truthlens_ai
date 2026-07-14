@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister stated that students should be able to converse in English.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Minister M.C. Sudhakar urges English communication on campuses to boost student confidence and employability in higher education. Higher education minister MC Sudhakar urged govt college teachers to speak in English on campus to help students improve their speaking skills ... Asking to speak in English on the campus, at least for a few hours, will give students confidence,\u201d a Congress leader said. \u201cThose who want to ...",
+      "url": "https://www.thehindu.com/news/national/karnataka/students-and-faculty-should-converse-in-english-on-campuses-minister/article70529818.ece",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.thehindu.com/news/national/karnataka/students-and-faculty-should-converse-in-english-on-campuses-minister/article70529818.ece",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.7044005990028381,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.8072002995014191,
+  "claim": "The minister stated that students should be able to converse in English."
+}

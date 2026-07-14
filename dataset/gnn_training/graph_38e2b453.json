@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Opposition parties are raising concerns that students have been discouraged by the minister's conversation.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "India's frustrated students demand the resignation of the country's education minister. 434. 4. Share. NPR is an American public broadcast ... Gandhi points out a perceived difference in how the Speaker greeted him versus Prime Minister Narendra Modi, sparking a heated discussion on the ... As long as this minister (Education Minister Dharmendra Pradhan) is there, the students will not get justice.\u201d As opposition members raised the ...",
+      "url": "https://www.youtube.com/shorts/ukSs3cs0HbI",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.youtube.com/shorts/ukSs3cs0HbI",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4329336881637573,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6714668440818787,
+  "claim": "Opposition parties are raising concerns that students have been discouraged by the minister's conversation."
+}

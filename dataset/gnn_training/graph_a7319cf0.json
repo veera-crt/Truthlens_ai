@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Udhayanidhi Stalin, DMK's leader of opposition, states that the minister's actions affect children's confidence and are not how a minister should deal with students.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Udayanithi is assitant CM so he is also responsible for any crime or misconduct that happens in TN .How can he blame enteirely on the C M. In a statement, Udhayanidhi described the minister's conduct as \u201cshocking, disgusting and grossly insensitive\u201d. Thiru Udhayanidhi Stalin's political journey began when he took on the role of Youth Wing Secretary, a position from which he led the party through the ...",
+      "url": "https://www.facebook.com/beingsouthee/posts/dmk-leader-and-leader-of-the-opposition-udhayanidhi-stalin-has-strongly-condemne/1490452429793109/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/beingsouthee/posts/dmk-leader-and-leader-of-the-opposition-udhayanidhi-stalin-has-strongly-condemne/1490452429793109/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.5342568159103394,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7221284079551697,
+  "claim": "Udhayanidhi Stalin, DMK's leader of opposition, states that the minister's actions affect children's confidence and are not how a minister should deal with students."
+}

@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "The minister's interaction took place at a government school near Sivakasi district.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "IT Minister Keerthana in a government school near Sivakasi has sparked a political controversy after a video showed her questioning students in ... Subject: Serious Concerns Regarding Safety Violations and Mismanagement at Sri Venkateswara School, Tamil Nadu It has come to my attention that ... The controversy arose after the minister visited the Government Girls Higher Secondary School at Thiruthangal near Sivakasi in Virudhunagar ...",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.facebook.com/mo.of.everything/posts/a-classroom-inspection-by-tvk-it-minister-keerthana-in-a-government-school-near-/1026901919711843/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6331855058670044,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7715927529335023,
+  "claim": "The minister's interaction took place at a government school near Sivakasi district."
+}

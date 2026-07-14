@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Action will be taken as per the judges' direction.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "Each High Court has power to issue to any person within its jurisdiction directions, orders, or writs including writs which are in the nature of habeas corpus, ... Supreme Court's direction to take follow-up action to determine the required judge strength of the district judiciary based on the NCMSC interim report. It depends on the District Judge what steps according to the circumstances of the District he must take. But the step should be peaceful so ...",
+      "url": "https://www.sci.gov.in/jurisdiction/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.sci.gov.in/jurisdiction/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.6228703260421753,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.7964351630210875,
+  "claim": "Action will be taken as per the judges' direction."
+}

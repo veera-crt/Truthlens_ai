@@ -1,0 +1,38 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "claim",
+      "text": "Opposition leader Udhayanidhi Stalin asserts that the 'Thavaikka' government, which he describes as full of miseries, will collapse on its own.",
+      "id": "CLAIM"
+    },
+    {
+      "type": "evidence",
+      "text": "'Can it last three months?' Stalin questions stability of TVK government in Tamil Nadu Former Tamil Nadu Chief Minister and DMK president MK ... Udhayanidhi Stalin Claims TVK Is Trying To Split DMK, Says MLAs Can't Be Bought With Money Leader of Opposition Udhayanidhi Stalin has ... Tamil Nadu Opposition leader Udhayanidhi Stalin strongly criticises the TVK government, alleging that Assembly standards have fallen badly.",
+      "url": "https://www.instagram.com/reel/DYhMK9pmi6U/",
+      "id": "EV_serper"
+    },
+    {
+      "type": "source",
+      "url": "https://www.instagram.com/reel/DYhMK9pmi6U/",
+      "id": "SRC_serper"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "supported_by",
+      "weight": 0.4868791401386261,
+      "source": "CLAIM",
+      "target": "EV_serper"
+    },
+    {
+      "relation": "comes_from",
+      "source": "EV_serper",
+      "target": "SRC_serper"
+    }
+  ],
+  "baseline_trust_score": 0.6984395700693131,
+  "claim": "Opposition leader Udhayanidhi Stalin asserts that the 'Thavaikka' government, which he describes as full of miseries, will collapse on its own."
+}
